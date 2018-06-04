@@ -76,11 +76,11 @@ const particleParams = {
     move: {
       enable: true,
       speed: 7,
-      direction: "none",
+      direction: "bottom-left",
       random: false,
       straight: false,
       out_mode: "out",
-      bounce: true,
+      bounce: false,
       attract: {
         enable: false,
         rotateX: 600,

@@ -2,7 +2,7 @@
   "name": "me",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Lexscher.com/me",
+  "homepage": "http://Lexscher.github.io/me",
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

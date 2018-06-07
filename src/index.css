@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Alegreya Sans SC", sans-serif;
-  background-color: #885757;
+  background-color: #430a0a;
+  /* background-color: #885757; */
   color: #42c5fa;
 }
 
@@ -199,7 +200,7 @@ body {
 /* Now let's break it down! */
 @media only screen and (max-width: 1007px) {
   body {
-    background-color: black;
+    background-color: #370c3d;
   }
   .projects-container {
     flex-direction: column;
@@ -214,7 +215,7 @@ body {
 
 @media only screen and (max-width: 601px) {
   body {
-    background-color: #fd6a6a;
+    background-color: #060f26;
   }
   .about-img {
     height: 275px;

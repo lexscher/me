@@ -5,8 +5,6 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import Party from "./Party";
 
-import "./App.css";
-
 class App extends Component {
   render() {
     return (
@@ -22,9 +20,10 @@ class App extends Component {
             <Link className="links" to="/me/projects">
               Projects.
             </Link>
-            <Link className="links" to="/me/particles">
+            {/* I think I want to put something else here... We'll leave this commented out. for now. */}
+            {/* <Link className="links" to="/me/particles">
               More Particles!!
-            </Link>
+            </Link> */}
           </nav>
           <div className="content">
             <Route

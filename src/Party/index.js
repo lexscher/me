@@ -7,13 +7,7 @@ class Party extends Component {
   }
 
   render() {
-    return (
-      <div className="game-container">
-        <Particles id="particles-js" params={particleParams}>
-          <h1 className="h">hello</h1>
-        </Particles>
-      </div>
-    );
+    return <Particles className="party-curls" params={particleParams} />;
   }
 }
 
@@ -22,26 +16,27 @@ class Party extends Component {
 const particleParams = {
   particles: {
     number: {
-      value: 20,
+      value: 25,
       density: {
         enable: true,
         value_area: 800
       }
     },
     color: {
-      value: "#00D1FF"
+      value: "#fff"
     },
     shape: {
-      type: "circle",
+      type: "image",
       stroke: {
         width: 2,
-        color: "#00D1FF"
+        color: "#000"
       },
       polygon: {
         nb_sides: 5
       },
       image: {
-        src: "https://i.imgur.com/RYVm3qh.jpg",
+        src:
+          "https://raw.githubusercontent.com/Lexscher/me/master/cool-wars/darth-vader.png",
         width: 100,
         height: 100
       }
@@ -57,26 +52,26 @@ const particleParams = {
       }
     },
     size: {
-      value: 18,
+      value: 50,
       random: true,
       anim: {
-        enable: false,
+        enable: true,
         speed: 10,
-        size_min: 0.1,
-        sync: false
+        size_min: 22,
+        sync: true
       }
     },
     line_linked: {
-      enable: true,
-      distance: 125,
-      color: "#EE1616",
-      opacity: 0.7,
-      width: 1.5
+      enable: false,
+      distance: 250,
+      color: "#00FF70",
+      opacity: 0.8,
+      width: 5
     },
     move: {
       enable: true,
-      speed: 7,
-      direction: "bottom-left",
+      speed: 3,
+      direction: "none",
       random: false,
       straight: false,
       out_mode: "out",
@@ -93,11 +88,11 @@ const particleParams = {
     events: {
       onhover: {
         enable: true,
-        mode: ["bubble", "repulse", "grab"]
+        mode: "bubble"
       },
       onclick: {
         enable: true,
-        mode: "push"
+        mode: "repulse"
       },
       resize: true
     },
@@ -109,15 +104,15 @@ const particleParams = {
         }
       },
       bubble: {
-        distance: 200,
-        size: 24,
+        distance: 100,
+        size: 100,
         duration: 2,
-        opacity: 1,
-        speed: 3
+        opacity: 0.2,
+        speed: 10
       },
       repulse: {
-        distance: 50,
-        duration: 0.4
+        distance: 75,
+        duration: 0.8
       },
       push: {
         particles_nb: 5

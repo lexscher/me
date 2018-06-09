@@ -83,6 +83,8 @@ class About extends Component {
   }
 }
 
+// kinda remembered the stylesheet and stackNavigator in React Native.
+// Making a constant to hold the parameters, and then passing it to the Particles seems a lot cleaner.
 const particleParams = {
   particles: {
     number: {

@@ -11,14 +11,14 @@ class App extends Component {
       <Router>
         <div className="container">
           <nav className="nav-bar">
-            <Link className="links" to="/me">
+            <Link className="links" to="/">
               Alex.
             </Link>
-            <Link className="links" to="/me/alexander">
-              Interwebs.
-            </Link>
-            <Link className="links" to="/me/projects">
+            <Link className="links" to="/projects">
               Projects.
+            </Link>
+            <Link className="links" to="/connect">
+              Connect!
             </Link>
             {/* I think I want to put something else here... We'll leave this commented out. for now. */}
             {/* <Link className="links" to="/me/particles">
@@ -28,18 +28,18 @@ class App extends Component {
           <div className="content">
             <Route
               exact
-              path="/"
+              path="/me"
               render={() => (
                 <h1 className="greetings">
                   Please, use the navigation bar above.
                 </h1>
               )}
             />
-            <Route exact path="/me" render={() => <About />} />
-            <Route exact path="/me/alexander" render={() => <Connect />} />
-            <Route exact path="/me/projects" render={() => <Portfolio />} />
-            <Route exact path="/me/particles" render={() => <Party />} />
-            <Route from="*" to="/me" />
+            <Route exact path="/" render={() => <About />} />
+            <Route exact path="/connect" render={() => <Connect />} />
+            <Route exact path="/projects" render={() => <Portfolio />} />
+            <Route exact path="/particles" render={() => <Party />} />
+            <Route from="*" to="/" />
           </div>
         </div>
       </Router>

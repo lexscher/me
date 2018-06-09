@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Alegreya Sans SC", sans-serif;
-  background-color: #430a0a;
+  background-color: #885757;
   /* background-color: #885757; */
   color: #42c5fa;
 }
@@ -20,12 +20,12 @@ body {
 
 .nav-bar {
   display: flex;
-  background-color: #8ca3a3;
+  background-color: #808080;
   width: 100vw;
   align-items: center;
   justify-content: space-around;
   padding: 8px 4px;
-  border-bottom: 5px double #60505e;
+  border-bottom: 5px double #42c5fa;
 }
 
 .links {
@@ -82,7 +82,7 @@ body {
   overflow: visible;
 }
 .particles {
-  height: 40vh;
+  height: 50vh;
   width: 30vw;
   flex-basis: 40%;
   overflow: visible;
@@ -115,19 +115,40 @@ body {
   padding: 0 15px;
 }
 
+.skills-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  height: 100%;
+}
+
+.party-curls {
+  height: 48vh;
+  width: 30vw;
+  flex-basis: 40%;
+  overflow: visible;
+  border: 5px double #42c5fa;
+  border-radius: 10px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
 .social-media {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .skill-item-container {
   list-style: none;
   display: flex;
+  flex-basis: 40%;
   flex-direction: column;
   overflow-y: scroll;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  margin: auto 20px;
 }
 
 .skill-item {
@@ -138,7 +159,7 @@ body {
 }
 
 .skill-item:hover {
-  font-size: 100px;
+  font-size: 75px;
   text-shadow: 10px 10px 20px #42c5fa, 0 0 100px #885757, 0 0 50px #000;
 }
 
@@ -227,7 +248,7 @@ body {
     font-size: 30px;
   }
   .skill-item:hover {
-    font-size: 70px;
+    font-size: 45px;
   }
 }
 
@@ -247,10 +268,10 @@ body {
   }
 
   .skill-item {
-    font-size: 30px;
+    font-size: 20px;
   }
   .skill-item:hover {
-    font-size: 55px;
+    font-size: 35px;
     text-shadow: 5px 5px 10px #42c5fa, 0 0 500px #885757, 0 0 25px #000;
   }
 }
@@ -269,10 +290,10 @@ body {
     height: 150px;
   }
   .skill-item {
-    font-size: 20px;
+    font-size: 12px;
   }
   .skill-item:hover {
-    font-size: 45px;
+    font-size: 20px;
     text-shadow: 5px 5px 10px #42c5fa, 0 0 500px #885757, 0 0 25px #000;
   }
 }

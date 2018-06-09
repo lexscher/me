@@ -34,7 +34,7 @@ class Connect extends Component {
     let socials = this.state.interwebs.map(link => (
       <a
         href={link.link}
-        target="_blamk"
+        target="_blank"
         rel="noopener noreferrer"
         className="about-link"
       >

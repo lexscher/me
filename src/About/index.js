@@ -27,7 +27,7 @@ class About extends Component {
               challenging myself, learning new things, and eating{" "}
               <a
                 className="about-link"
-                href="http://lavillapizza.com/"
+                href="https://lavillapizza.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -47,7 +47,7 @@ class About extends Component {
               I'm also a cellist! I went to a{" "}
               <a
                 className="about-link"
-                href="http://tuhs.nyc/"
+                href="https://www.google.com/search?q=talent+unlimited+high+school&rlz=1C5CHFA_enUS738US738&oq=talent+un&aqs=chrome.0.0j69i57j69i60j69i61j0j35i39.4192j0j4&sourceid=chrome&ie=UTF-8"
                 target="_blank"
                 rel="noopener noreferrer"
               >

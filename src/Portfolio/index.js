@@ -9,14 +9,14 @@ class Portfolio extends Component {
           name: "Tic-Tac-Time",
           screenshot_url: "https://i.imgur.com/XJlU15L.png",
           description: "Tic-Tac-Toe!!",
-          app_link: "http://tic-tac-time.bitballoon.com/",
+          app_link: "https://tic-tac-time.bitballoon.com/",
           github_link: "https://github.com/Lexscher/Tic-Tac-Toe"
         },
         {
           name: "Concipilo",
           screenshot_url: "https://i.imgur.com/ifl6mvv.png",
           description: "A text adventure game!",
-          app_link: "http://concipilo.bitballoon.com/",
+          app_link: "https://concipilo.bitballoon.com/",
           github_link: "https://github.com/Lexscher/Concipilo"
         },
         {

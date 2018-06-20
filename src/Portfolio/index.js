@@ -39,6 +39,14 @@ class Portfolio extends Component {
           description: "View and add to a gallery of haircuts!",
           app_link: "https://shrouded-plateau-40710.herokuapp.com/",
           github_link: "https://github.com/Lexscher/Haircut_Gallery"
+        },
+        {
+          name: "Pong.",
+          screenshot_url:
+            "https://raw.githubusercontent.com/Lexscher/pong/master/images/Pong.png",
+          description: "Play the Iconic game, Pong!",
+          app_link: "https://lexscher.github.io/pong/",
+          github_link: "https://github.com/Lexscher/pong"
         }
       ]
     };

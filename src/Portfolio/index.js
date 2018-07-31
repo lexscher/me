@@ -10,14 +10,16 @@ class Portfolio extends Component {
           screenshot_url: "https://i.imgur.com/XJlU15L.png",
           description: "Tic-Tac-Toe!!",
           app_link: "https://tic-tac-time.bitballoon.com/",
-          github_link: "https://github.com/Lexscher/Tic-Tac-Toe"
+          github_link: "https://github.com/Lexscher/Tic-Tac-Toe",
+          technologies: []
         },
         {
           name: "Concipilo",
           screenshot_url: "https://i.imgur.com/ifl6mvv.png",
           description: "A text adventure game!",
-          app_link: "https://concipilo.bitballoon.com/",
-          github_link: "https://github.com/Lexscher/Concipilo"
+          app_link: "https://lexscher.github.io/Concipilo/",
+          github_link: "https://github.com/Lexscher/Concipilo",
+          technologies: []
         },
         {
           name: "Flash Cards",

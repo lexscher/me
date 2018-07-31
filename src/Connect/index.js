@@ -18,6 +18,11 @@ class Connect extends Component {
         {
           name: "Twitter",
           link: "https://twitter.com/Lexscher"
+        },
+        {
+          name: "Resume",
+          link:
+            "https://drive.google.com/open?id=16XdudPyzj_Bgi7bZZRsn0FWvc5WazdT1"
         }
       ],
       skills: [

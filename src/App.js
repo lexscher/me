@@ -39,7 +39,7 @@ class App extends Component {
             <Route exact path="/connect" render={() => <Connect />} />
             <Route exact path="/projects" render={() => <Portfolio />} />
             <Route exact path="/particles" render={() => <Party />} />
-            <Route from="*" to="/" />
+            <Route from="/*" to="/" />
           </div>
         </div>
       </Router>

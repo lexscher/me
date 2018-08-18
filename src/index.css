@@ -106,24 +106,20 @@ body {
 .about-link {
   text-decoration: none;
   color: #42c5fa;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 .about-link:hover {
-  color: #000;
+  color: #f9f5ff;
   text-shadow: 1px 1px 2px #42c5fa, 0 0 25px #885757, 0 0 5px #000;
 }
 
 .connect {
-  padding: 0 15px;
-}
-
-.skills-body {
+  margin-top: 100px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  align-content: center;
-  height: 100%;
+  padding: 0 15px;
 }
 
 .party-curls {
@@ -137,33 +133,60 @@ body {
   border-bottom: 0px;
 }
 
-.social-media {
-  display: flex;
-  justify-content: space-around;
+.connect h1 {
+  overflow: hidden;
+  border-right: 0.15em solid #fff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.14em;
+  animation: type 3.5s steps(40, end), cursor 0.75s step-end infinite;
 }
 
-.skill-item-container {
+.connect h2 {
+  white-space: nowrap;
+  opacity: 0;
+  animation: ghost 2s forwards;
+  animation-delay: 3.9s;
+}
+
+.social-media {
   list-style: none;
   display: flex;
   flex-basis: 40%;
   flex-direction: column;
   overflow-y: scroll;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   margin: auto 20px;
 }
 
-.skill-item {
-  cursor: pointer;
-  font-size: 40px;
-  margin: auto 15px;
-  transition: 0.3s;
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-.skill-item:hover {
-  font-size: 75px;
-  text-shadow: 10px 10px 20px #42c5fa, 0 0 100px #885757, 0 0 50px #000;
+@keyframes cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+@keyframes ghost {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .projects-container {
@@ -174,7 +197,7 @@ body {
 .project-container {
   display: flex;
   flex-direction: column;
-  margin: auto 15px 10px;
+  margin: auto 25px 10px;
   padding: 3px 12px;
 }
 
@@ -187,19 +210,21 @@ body {
 .project-links {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .project-link {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-decoration: none;
   font-family: "VT323", monospace;
   color: #42c5fa;
 }
 
 .project-link-image {
-  background-color: #42c5fa;
-  height: 30px;
+  margin-top: -10px;
+  height: 50px;
 }
 .game-container {
   width: 100vw;
@@ -221,22 +246,56 @@ body {
   z-index: 5;
 }
 
+.tech-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 400px;
+}
+
+.tech {
+  border: solid 4px;
+  white-space: nowrap;
+  padding: 5px 7px;
+  margin: 0 12px;
+  color: white;
+  height: 24px;
+  text-shadow: 5px 5px 10px #000, 0 0 50px #000, 0 0 25px #fff;
+}
+
 /* Now let's break it down! */
 @media only screen and (max-width: 1007px) {
   body {
     background-color: #370c3d;
   }
-  .about-link:hover {
-    color: white;
-  }
   .projects-container {
     flex-direction: column;
+  }
+  .tech-container {
+    flex-wrap: wrap;
+  }
+  .tech {
+    margin: 5px 10px;
+    text-shadow: 4px 4px 8px #0f0, 0 0 25px #000, 0 0 12px #fff;
+  }
+  .connect h1 {
+    font-size: 24px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .project-image {
     height: 300px;
+  }
+  .tech-container {
+    flex-wrap: wrap;
+  }
+  .tech {
+    font-size: 12px;
+    height: 12px;
+  }
+  .connect h1 {
+    font-size: 20px;
   }
 }
 
@@ -255,6 +314,12 @@ body {
   }
   .skill-item:hover {
     font-size: 45px;
+  }
+  .tech {
+    text-shadow: 2px 2px 4px #fff, 0 0 25px #000, 0 0 12px #fff;
+  }
+  .connect h1 {
+    font-size: 16px;
   }
 }
 
@@ -279,6 +344,9 @@ body {
   .skill-item:hover {
     font-size: 35px;
     text-shadow: 5px 5px 10px #42c5fa, 0 0 500px #885757, 0 0 25px #000;
+  }
+  .connect h1 {
+    font-size: 12px;
   }
 }
 

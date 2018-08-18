@@ -8,10 +8,26 @@ class Portfolio extends Component {
         {
           name: "Tic-Tac-Time",
           screenshot_url: "https://i.imgur.com/XJlU15L.png",
-          description: "Tic-Tac-Toe!!",
-          app_link: "https://tic-tac-time.bitballoon.com/",
+          description: "I Recreated Tic-Tac-Toe!!",
+          app_link: "https://lexscher.github.io/Tic-Tac-Toe/",
           github_link: "https://github.com/Lexscher/Tic-Tac-Toe",
-          technologies: []
+          technologies: ["HTML", "CSS", "JavaScript", "jQuery"]
+        },
+        {
+          name: "Cut It",
+          screenshot_url: "https://i.imgur.com/e84H3km.png",
+          description: "View and add to a gallery of haircuts!",
+          app_link: "https://you-need-to-cut-it.herokuapp.com/",
+          github_link: "https://github.com/Lexscher/Haircut_Gallery",
+          technologies: [
+            "Ruby on Rails",
+            "BCrypt",
+            "Auth",
+            "JWT Sessions",
+            "React",
+            "JavaScript",
+            "CSS"
+          ]
         },
         {
           name: "Concipilo",
@@ -19,28 +35,15 @@ class Portfolio extends Component {
           description: "A text adventure game!",
           app_link: "https://lexscher.github.io/Concipilo/",
           github_link: "https://github.com/Lexscher/Concipilo",
-          technologies: []
-        },
-        {
-          name: "Flash Cards",
-          screenshot_url: "https://i.imgur.com/W2WNNOJ.png",
-          description: "An app to help you study! This was a group project.",
-          app_link: "https://glacial-escarpment-17286.herokuapp.com/",
-          github_link: "https://github.com/Lexscher/Flash-Cards"
+          technologies: ["Vanilla JavaScript", "HTML", "CSS"]
         },
         {
           name: "Pokèmon App",
           screenshot_url: "https://i.imgur.com/mmBjX3f.png",
           description: "Behold... The PokèDex of your dreams!",
-          app_link: "https://shrouded-lake-66712.herokuapp.com/",
-          github_link: "https://github.com/Lexscher/Pok-Dex-App"
-        },
-        {
-          name: "Cut It",
-          screenshot_url: "https://i.imgur.com/e84H3km.png",
-          description: "View and add to a gallery of haircuts!",
-          app_link: "https://shrouded-plateau-40710.herokuapp.com/",
-          github_link: "https://github.com/Lexscher/Haircut_Gallery"
+          app_link: "https://alexanders-pokeapp.herokuapp.com/",
+          github_link: "https://github.com/Lexscher/Pok-Dex-App",
+          technologies: ["React", "Poke Api", "CSS", "JavaScript"]
         },
         {
           name: "Pong.",
@@ -48,14 +51,14 @@ class Portfolio extends Component {
             "https://raw.githubusercontent.com/Lexscher/pong/master/images/Pong.png",
           description: "Play the Iconic game, Pong!",
           app_link: "https://lexscher.github.io/pong/",
-          github_link: "https://github.com/Lexscher/pong"
+          github_link: "https://github.com/Lexscher/pong",
+          technologies: ["HTML Canvas", "Vanilla JS", "CSS"]
         }
       ]
     };
   }
 
   render() {
-    // map through the project object.
     let projects = this.state.project.map(project => (
       <div className="project-container" key={project.name}>
         <h1>{project.name}</h1>
@@ -65,12 +68,17 @@ class Portfolio extends Component {
           alt={project.name}
         />
         <p className="project-description">{project.description}</p>
+        <div className="tech-container">
+          {project.technologies.map(technology => (
+            <h3 className="tech">{technology}</h3>
+          ))}
+        </div>
         <div className="project-links">
           <a className="project-link" href={project.app_link} target="_blank">
-            <p>try it!</p>
+            <p>Check it Out!</p>
             <img
               className="project-link-image"
-              src="https://d30y9cdsu7xlg0.cloudfront.net/png/114-200.png"
+              src="https://www.freepngimg.com/download/web_design/24947-9-cursor-hand-transparent-image.png"
               alt="Link to learn more!"
             />
           </a>
@@ -80,10 +88,10 @@ class Portfolio extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p>github</p>
+            <p>GitHub</p>
             <img
               className="project-link-image"
-              src="https://octicons.github.com/img/og/mark-github.png"
+              src="https://magentys.io/wp-content/uploads/2017/04/github-logo-1.png"
               alt="Link to learn more!"
             />
           </a>

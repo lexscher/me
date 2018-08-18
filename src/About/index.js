@@ -66,8 +66,11 @@ class About extends Component {
               music if my friends and I didn't form a robotics team during our
               junior year. We had to convince our physics teacher to supervise
               us. We would meet during lunch and after school so we can learn
-              how to build, and program a robot. The goal was to compete. My
-              teacher had us registered to enter a competition, but we had a
+              how to build, and program a robot. The goal was to compete.
+            </p>
+            <p>
+              {" "}
+              My teacher had us registered to enter a competition, but we had a
               late start(we made the club halfway into the school year). Even
               with all the extra time we put in, we were not ready by the
               deadline. That didn't discourage us! We finished the robot a

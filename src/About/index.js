@@ -10,7 +10,11 @@ class About extends Component {
           <Particles className="partycles" params={particleParams} />
           <div className="main-header">
             <h1>Alexander</h1>
-            <img className="about-img" src={selfie} alt="alex" />
+            <img
+              className="about-img"
+              src="https://raw.githubusercontent.com/Lexscher/me/master/src/images/Alex-The-Hat.jpg"
+              alt="alex"
+            />
           </div>
           <Particles className="partycles" params={particleParams} />
         </header>

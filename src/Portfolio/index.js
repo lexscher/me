@@ -12,7 +12,8 @@ class Portfolio extends Component {
       project: [
         {
           name: "Tic-Tac-Time",
-          screenshot_url: `${tic}`,
+          screenshot_url:
+            "https://raw.githubusercontent.com/Lexscher/me/master/src/images/tic-tac-time.png",
           description: "I Recreated Tic-Tac-Toe!!",
           app_link: "https://lexscher.github.io/Tic-Tac-Toe/",
           github_link: "https://github.com/Lexscher/Tic-Tac-Toe",
@@ -20,7 +21,8 @@ class Portfolio extends Component {
         },
         {
           name: "Cut It",
-          screenshot_url: `${sharp}`,
+          screenshot_url:
+            "https://raw.githubusercontent.com/Lexscher/me/master/src/images/cut-it.png",
           description: "View and add to a gallery of haircuts!",
           app_link: "https://you-need-to-cut-it.herokuapp.com/",
           github_link: "https://github.com/Lexscher/Haircut_Gallery",
@@ -36,7 +38,8 @@ class Portfolio extends Component {
         },
         {
           name: "Concipilo",
-          screenshot_url: `${urFave}`,
+          screenshot_url:
+            "https://raw.githubusercontent.com/Lexscher/me/master/src/images/concipilo.png",
           description: "A text adventure game!",
           app_link: "https://lexscher.github.io/Concipilo/",
           github_link: "https://github.com/Lexscher/Concipilo",
@@ -44,7 +47,8 @@ class Portfolio extends Component {
         },
         {
           name: "Pokèmon App",
-          screenshot_url: `${pika}`,
+          screenshot_url:
+            "https://raw.githubusercontent.com/Lexscher/me/master/src/images/pokedex.png",
           description: "Behold... The PokèDex of your dreams!",
           app_link: "https://alexanders-pokeapp.herokuapp.com/",
           github_link: "https://github.com/Lexscher/Pok-Dex-App",
@@ -52,7 +56,8 @@ class Portfolio extends Component {
         },
         {
           name: "Pong.",
-          screenshot_url: `${pong}`,
+          screenshot_url:
+            "https://raw.githubusercontent.com/Lexscher/me/master/src/images/pong.png",
           description: "Play the Iconic game, Pong!",
           app_link: "https://lexscher.github.io/pong/",
           github_link: "https://github.com/Lexscher/pong",

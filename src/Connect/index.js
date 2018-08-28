@@ -26,7 +26,7 @@ class Connect extends Component {
         {
           name: "My Résumé.",
           link:
-            "https://drive.google.com/open?id=1dw9emPfyyUvsLqfZ5WbA2GZ-LnWdODH-"
+            "https://drive.google.com/open?id=13y1dCVF2gq2scwl9847_meIWdqIONpiU"
         }
       ]
     };

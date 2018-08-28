@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Particles from "react-particles-js";
+import selfie from "../images/Alex-The-Hat.jpg";
 
 class About extends Component {
   render() {
@@ -9,11 +10,7 @@ class About extends Component {
           <Particles className="partycles" params={particleParams} />
           <div className="main-header">
             <h1>Alexander</h1>
-            <img
-              className="about-img"
-              src="https://i.imgur.com/RYVm3qhm.jpg"
-              alt="alex"
-            />
+            <img className="about-img" src={selfie} alt="alex" />
           </div>
           <Particles className="partycles" params={particleParams} />
         </header>

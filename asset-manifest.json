@@ -1,6 +1,12 @@
 {
-  "main.css": "static/css/main.d58ef00c.css",
-  "main.css.map": "static/css/main.d58ef00c.css.map",
-  "main.js": "static/js/main.e006d6c8.js",
-  "main.js.map": "static/js/main.e006d6c8.js.map"
+  "main.css": "static/css/main.eec02915.css",
+  "main.css.map": "static/css/main.eec02915.css.map",
+  "main.js": "static/js/main.6a1c915f.js",
+  "main.js.map": "static/js/main.6a1c915f.js.map",
+  "static/media/Alex-The-Hat.jpg": "static/media/Alex-The-Hat.333af1a7.jpg",
+  "static/media/concipilo.png": "static/media/concipilo.1c42f24f.png",
+  "static/media/cut-it.png": "static/media/cut-it.0fb53704.png",
+  "static/media/pokedex.png": "static/media/pokedex.aba6ed36.png",
+  "static/media/pong.png": "static/media/pong.7bf3edcd.png",
+  "static/media/tic-tac-time.png": "static/media/tic-tac-time.59f7f221.png"
 }

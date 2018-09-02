@@ -12,7 +12,7 @@ class About extends Component {
             <h1>Alexander</h1>
             <img
               className="about-img"
-              src="https://raw.githubusercontent.com/Lexscher/me/master/src/images/Alex-The-Hat.jpg"
+              src="https://i.imgur.com/RYVm3qhm.jpg"
               alt="alex"
             />
           </div>

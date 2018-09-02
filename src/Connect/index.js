@@ -37,6 +37,7 @@ class Connect extends Component {
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleMessageChange = this.handleMessageChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
@@ -53,6 +54,11 @@ class Connect extends Component {
   handleMessageChange(event) {
     console.log(event.target.value);
     this.setState({message: event.target.value});
+  }
+
+  handleSubmit(event) {
+    console.log('An email was submitted: ' + this.state.value);
+    event.preventDefault();
   }
 
   render() {
@@ -75,24 +81,25 @@ class Connect extends Component {
         </h2>
         <div className="social-media">
           {socials}
-          <h3 id="contact-me" className="about-link">
+          {/* <h3 id="contact-me" className="about-link">
             You can email me, too!
-          </h3>
+          </h3> */}
         </div>
-        <div className="form-container">
+        {/* <div className="form-container">
           <form
             action="mailto:ascellie@gmail.com"
             method="post"
             enctype="text/plain"
+            onSubmit={this.handleSubmit}
           >
           
             <input className="form-info" type="text" name="name" placeholder="Name" value={this.state.value} onChange={this.handleNameChange} />
-            <input className="form-info" type="text" name="mail" placeholder="E-Mail" value={this.state.value} onChange={this.handleEmailChange} />
+            <input className="form-info" type="email" name="mail" placeholder="E-Mail" value={this.state.value} onChange={this.handleEmailChange} />
             <textarea className="form-message" name="comment" rows="7" cols="48" placeholder="Write your message here..." value={this.state.value} onChange={this.handleMessageChange} />
-            <input className="form-button" type="submit" value="submit" />
+            <input className="form-button" type="submit" value="Submit" />
             
           </form>
-        </div>
+        </div> */}
       </div>
     );
   }

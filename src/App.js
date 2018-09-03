@@ -5,19 +5,27 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import Party from "./Party";
 
+
 class App extends Component {
   render() {
+  let toTheTop = () => {
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScroll > 0) {
+         window.requestAnimationFrame(toTheTop);
+         window.scrollTo (0,currentScroll - (currentScroll/5));
+    }
+  };
     return (
       <Router>
         <div className="container">
           <nav className="nav-bar">
-            <Link className="links" to="/">
+            <Link className="links" to="/" onClick={toTheTop}>
               Alex.
             </Link>
-            <Link className="links" to="/projects">
+            <Link className="links" to="/projects" onClick={toTheTop}>
               Projects.
             </Link>
-            <Link className="links" to="/connect">
+            <Link className="links" to="/connect" onClick={toTheTop}>
               Connect!
             </Link>
             {/* I think I want to put something else here... We'll leave this commented out. for now. */}
@@ -41,6 +49,9 @@ class App extends Component {
             <Route exact path="/particles" render={() => <Party />} />
             <Route from="/*" to="/" />
           </div>
+          <footer>
+            <h3>Built by Alexander Schelchere using React.</h3>
+          </footer>
         </div>
       </Router>
     );

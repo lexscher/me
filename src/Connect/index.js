@@ -20,8 +20,12 @@ class Connect extends Component {
           link: "https://medium.com/@ascellie"
         },
         {
+          name: "Tag me on Instagram!",
+          link: "https://instagram.com/arexamder"
+        },
+        {
           name: "@ me on Twitter!",
-          link: "https://twitter.com/Lexscher"
+          link: "https://twitter.com/arexamder"
         },
         {
           name: "My Résumé.",
@@ -31,33 +35,32 @@ class Connect extends Component {
       ],
       name: "",
       email: "",
-      message: "",
+      message: ""
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleMessageChange = this.handleMessageChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
   handleNameChange(event) {
     console.log(event.target.value);
-    this.setState({name: event.target.value});
+    this.setState({ name: event.target.value });
   }
 
   handleEmailChange(event) {
     console.log(event.target.value);
-    this.setState({email: event.target.value});
+    this.setState({ email: event.target.value });
   }
 
   handleMessageChange(event) {
     console.log(event.target.value);
-    this.setState({message: event.target.value});
+    this.setState({ message: event.target.value });
   }
 
   handleSubmit(event) {
-    console.log('An email was submitted: ' + this.state.value);
+    console.log("An email was submitted: " + this.state.value);
     event.preventDefault();
   }
 
@@ -92,12 +95,12 @@ class Connect extends Component {
             enctype="text/plain"
             onSubmit={this.handleSubmit}
           >
-          
+
             <input className="form-info" type="text" name="name" placeholder="Name" value={this.state.value} onChange={this.handleNameChange} />
             <input className="form-info" type="email" name="mail" placeholder="E-Mail" value={this.state.value} onChange={this.handleEmailChange} />
             <textarea className="form-message" name="comment" rows="7" cols="48" placeholder="Write your message here..." value={this.state.value} onChange={this.handleMessageChange} />
             <input className="form-button" type="submit" value="Submit" />
-            
+
           </form>
         </div> */}
       </div>

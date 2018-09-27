@@ -1,37 +1,32 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Connect from "./Connect";
-import About from "./About";
-import Portfolio from "./Portfolio";
-import Party from "./Party";
-
+import Home from "./Home";
+import Projects from "./Projects";
+import FindMe from "./FindMe";
 
 class App extends Component {
   render() {
-  let toTheTop = () => {
-    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    if (currentScroll > 0) {
-         window.requestAnimationFrame(toTheTop);
-         window.scrollTo (0,currentScroll - (currentScroll/5));
-    }
-  };
+    let toTheTop = () => {
+      var currentScroll =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(toTheTop);
+        window.scrollTo(0, currentScroll - currentScroll / 5);
+      }
+    };
     return (
       <Router>
         <div className="container">
           <nav className="nav-bar">
             <Link className="links" to="/" onClick={toTheTop}>
-              Alex.
+              Home.
             </Link>
-            <Link className="links" to="/projects" onClick={toTheTop}>
-              Projects.
+            <Link className="links" to="/Projects" onClick={toTheTop}>
+              Portfolio.
             </Link>
-            <Link className="links" to="/connect" onClick={toTheTop}>
-              Connect!
+            <Link className="links" to="/LinkUp" onClick={toTheTop}>
+              Find Me.
             </Link>
-            {/* I think I want to put something else here... We'll leave this commented out. for now. */}
-            {/* <Link className="links" to="/me/particles">
-              More Particles!!
-            </Link> */}
           </nav>
           <div className="content">
             <Route
@@ -43,10 +38,9 @@ class App extends Component {
                 </h1>
               )}
             />
-            <Route exact path="/" render={() => <About />} />
-            <Route exact path="/connect" render={() => <Connect />} />
-            <Route exact path="/projects" render={() => <Portfolio />} />
-            <Route exact path="/particles" render={() => <Party />} />
+            <Route exact path="/" render={() => <Home />} />
+            <Route exact path="/Projects" render={() => <Projects />} />
+            <Route exact path="/LinkUp" render={() => <FindMe />} />
             <Route from="/*" to="/" />
           </div>
           <footer>

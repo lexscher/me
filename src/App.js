@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import Connect from "./Connect";
 import About from "./About";
 import Portfolio from "./Portfolio";
-import Party from "./Party";
+import Game from "./Game";
+import Sorry from "./Sorry";
+
 
 
 class App extends Component {
@@ -28,26 +30,18 @@ class App extends Component {
             <Link className="links" to="/connect" onClick={toTheTop}>
               Connect!
             </Link>
-            {/* I think I want to put something else here... We'll leave this commented out. for now. */}
-            {/* <Link className="links" to="/me/particles">
-              More Particles!!
-            </Link> */}
+            <Link className="links" to="/game">
+              Play a Game?!
+            </Link>
           </nav>
           <div className="content">
-            <Route
-              exact
-              path="/me"
-              render={() => (
-                <h1 className="greetings">
-                  Please, use the navigation bar above.
-                </h1>
-              )}
-            />
-            <Route exact path="/" render={() => <About />} />
-            <Route exact path="/connect" render={() => <Connect />} />
-            <Route exact path="/projects" render={() => <Portfolio />} />
-            <Route exact path="/particles" render={() => <Party />} />
-            <Route from="/*" to="/" />
+            <Switch>
+              <Route exact path="/" render={() => <About />} />
+              <Route exact path="/connect" render={() => <Connect />} />
+              <Route exact path="/projects" render={() => <Portfolio />} />
+              {/* <Route exact path="/game" render={() => <Game />} /> */}
+              <Route component={Sorry} />
+            </Switch>
           </div>
           <footer>
             <h3>Built by Alexander Schelchere using React.</h3>

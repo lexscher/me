@@ -1,12 +1,10 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import Connect from "./Connect";
-import About from "./About";
-import Portfolio from "./Portfolio";
-import Game from "./Game";
-import Sorry from "./Sorry";
-
-
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import Connect from './Connect';
+import About from './About';
+import Portfolio from './Portfolio';
+import Game from './Game';
+import Sorry from './Sorry';
 
 class App extends Component {
   render() {

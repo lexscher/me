@@ -10,10 +10,11 @@ body {
   font-family: 'VT323', monospace;
 }
 
-footer {
-  position: 0;
-  background: black;
-  color: white;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-bar {
@@ -191,13 +192,11 @@ footer {
   padding: 8px 12px;
   background-color: #42c5fa;
 }
-
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 input, textarea {
   margin-top:12px;
   margin-bottom: 12px;
@@ -208,17 +207,14 @@ input, textarea {
 /* .form-info {
   padding: 12px 30px;
 }
-
 .form-message { */
 /* resize:both; */
 /* }
-
 .form-button {
   padding: 7px 12px;
   cursor: pointer;
   font-weight: bolder;
 }
-
 .form-button:hover {
   background-color: #000405;
   color: #bdcdd3;
@@ -252,7 +248,6 @@ input, textarea {
 
 .project-link {
   display: flex;
-  text-align: center;
   flex-direction: column;
   align-items: center;
   text-decoration: none;

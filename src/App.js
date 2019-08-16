@@ -26,8 +26,8 @@ class App extends Component {
             <Link className="links" to="/Projects" onClick={toTheTop}>
               Portfolio.
             </Link>
-            <Link className="links" to="/LinkUp" onClick={toTheTop}>
-              Find Me.
+            <Link className="links" to="/Connect" onClick={toTheTop}>
+              Connect.
             </Link>
             {/* <Link className="links" to="/game">
               Play a Game?!

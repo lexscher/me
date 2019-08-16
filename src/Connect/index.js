@@ -17,19 +17,35 @@ class Connect extends Component {
         },
         {
           name: "That one time I wrote something on Medium.",
-          link: "https://medium.com/@ascellie"
+          link: "https://medium.com/@lexscher"
+        },
+        {
+          name: "Tag me on Instagram!",
+          link: "https://instagram.com/arexamder"
         },
         {
           name: "@ me on Twitter!",
-          link: "https://twitter.com/Lexscher"
+          link: "https://twitter.com/arexamder"
         },
         {
           name: "My Résumé.",
           link:
-            "https://drive.google.com/open?id=13y1dCVF2gq2scwl9847_meIWdqIONpiU"
+            "https://drive.google.com/open?id=1MtHKnRh6u_jSDg3BXO9mrddnwJ-5z00M"
         }
-      ]
+      ],
+      name: "",
+      email: "",
+      message: ""
     };
+  }
+
+  handleInputChange = event => {
+    let { name, value } = event.target
+    this.setState({ [name]: value})
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
   }
 
   render() {
@@ -50,7 +66,9 @@ class Connect extends Component {
         <h2>
           <u>Find me on the internet.</u>
         </h2>
-        <div className="social-media">{socials}</div>
+        <div className="social-media">
+          {socials}
+        </div>
       </div>
     );
   }

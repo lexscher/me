@@ -1,13 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Asul", sans-serif;
+  font-family: 'Asul', sans-serif;
   background-color: #885757;
   color: #42c5fa;
 }
 
 .greetings {
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
 }
 
 .nav-bar {
-  font-family: "Cormorant SC", serif;
+  font-family: 'Cormorant SC', serif;
   display: flex;
   background-color: #000;
   width: 100vw;
@@ -64,14 +64,11 @@ body {
   height: 100%;
 }
 
-.main-header {
-}
-
 .about-img {
   height: 320px;
-  border-radius: 8px;
-  background-color: #fff;
-  border: 4px double #42c5fa;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.103);
+  border: 4px solid #42c5fa;
   transition: 0.6s;
   position: static;
 }
@@ -108,6 +105,7 @@ body {
 }
 
 .about-link:hover {
+  cursor: pointer;
   color: #f9f5ff;
   text-shadow: 1px 1px 2px #42c5fa, 0 0 25px #885757, 0 0 5px #000;
 }
@@ -145,6 +143,7 @@ body {
   opacity: 0;
   animation: ghost 2s forwards;
   animation-delay: 3.9s;
+  z-index: -1;
 }
 
 .social-media {
@@ -187,8 +186,49 @@ body {
   }
 }
 
+/* .form-container {
+  border: 4px solid black;
+  border-radius: 5px;
+  padding: 8px 12px;
+  background-color: #42c5fa;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea {
+  margin-top:12px;
+  margin-bottom: 12px;
+  border: 3px solid black;
+  border-radius: 5px;
+} */
+
+/* .form-info {
+  padding: 12px 30px;
+}
+
+.form-message { */
+/* resize:both; */
+/* }
+
+.form-button {
+  padding: 7px 12px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.form-button:hover {
+  background-color: #000405;
+  color: #bdcdd3;
+  box-shadow: #000405;
+} */
+
 .projects-container {
   display: flex;
+  flex-direction: column;
   overflow-x: scroll;
 }
 
@@ -216,7 +256,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
   color: #42c5fa;
 }
 
@@ -225,8 +265,9 @@ body {
   height: 50px;
 }
 .game-container {
+  top: -0.5rem;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   background-color: #000405;
 }
@@ -261,6 +302,36 @@ body {
   text-shadow: 5px 5px 10px #000, 0 0 50px #000, 0 0 25px #fff;
 }
 
+footer {
+  color: rgba(255, 255, 255, 0.938);
+  width: 60%;
+  border-top: 4px solid #edf1e8;
+  margin-top: 35px;
+  text-align: center;
+}
+footer h3 {
+  text-shadow: 5px 5px 8px #000405;
+}
+
+/* 404 NOT FOUND */
+#page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+}
+
+.h2-not-found {
+  position: fixed;
+  top: 4.5rem;
+  font-size: 2rem;
+}
+
+.h1-not-found {
+  font-size: 12rem;
+}
+
 /* Now let's break it down! */
 @media only screen and (max-width: 1007px) {
   body {
@@ -269,9 +340,7 @@ body {
   .about-img {
     height: 280px;
   }
-  .projects-container {
-    flex-direction: column;
-  }
+
   .tech-container {
     flex-wrap: wrap;
   }

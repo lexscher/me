@@ -1,6 +1,5 @@
-import React, { Component } from "react";
-import Particles from "react-particles-js";
-import selfie from "../images/Alex-The-Hat.jpg";
+import React, { Component } from 'react';
+import Particles from 'react-particles-js';
 
 class About extends Component {
   render() {
@@ -25,7 +24,7 @@ class About extends Component {
               Hello, world! <br />
               I'm a developer who sleeps in Brooklyn. My favorite language right
               now is JavaScript, but that may change as I learn. I love
-              challenging myself, learning new things, and eating{" "}
+              challenging myself, learning new things, and eating{' '}
               <a
                 className="about-link"
                 href="https://lavillapizza.com/"
@@ -33,8 +32,9 @@ class About extends Component {
                 rel="noopener noreferrer"
               >
                 Italian food
-              </a>. To stay active, I go to the gym, go for a run, or practice
-              my rock climbing skills at{" "}
+              </a>
+              . To stay active, I go to the gym, go for a run, or practice my
+              rock climbing skills at{' '}
               <a
                 className="about-link"
                 href="https://brooklynboulders.com/"
@@ -42,10 +42,11 @@ class About extends Component {
                 rel="noopener noreferrer"
               >
                 Brooklyn Boulders
-              </a>.
+              </a>
+              .
             </p>
             <p>
-              I'm also a cellist! I went to a{" "}
+              I'm also a cellist! I went to a{' '}
               <a
                 className="about-link"
                 href="https://www.google.com/search?q=talent+unlimited+high+school&rlz=1C5CHFA_enUS738US738&oq=talent+un&aqs=chrome.0.0j69i57j69i60j69i61j0j35i39.4192j0j4&sourceid=chrome&ie=UTF-8"
@@ -53,24 +54,25 @@ class About extends Component {
                 rel="noopener noreferrer"
               >
                 performing arts high school
-              </a>, where I was an instrumental major. On the weekends, I
-              attended{" "}
+              </a>
+              , where I was an instrumental major. On the weekends, I attended{' '}
               <a
                 className="about-link"
                 href="https://www.juilliard.edu/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {" "}
+                {' '}
                 Juilliard
-              </a>'s pre-college. I probably would've been persuing a career in
+              </a>
+              's pre-college. I probably would've been persuing a career in
               music if my friends and I didn't form a robotics team during our
               junior year. We had to convince our physics teacher to supervise
               us. We would meet during lunch and after school so we can learn
               how to build, and program a robot. The goal was to compete.
             </p>
             <p>
-              {" "}
+              {' '}
               My teacher had us registered to enter a competition, but we had a
               late start(we made the club halfway into the school year). Even
               with all the extra time we put in, we were not ready by the
@@ -99,19 +101,19 @@ const particleParams = {
       }
     },
     color: {
-      value: "#fff"
+      value: '#fff'
     },
     shape: {
-      type: "circle",
+      type: 'circle',
       stroke: {
         width: 2,
-        color: "#000"
+        color: '#000'
       },
       polygon: {
         nb_sides: 5
       },
       image: {
-        src: "https://i.imgur.com/RYVm3qh.jpg",
+        src: 'https://i.imgur.com/RYVm3qh.jpg',
         width: 100,
         height: 100
       }
@@ -139,17 +141,17 @@ const particleParams = {
     line_linked: {
       enable: true,
       distance: 125,
-      color: "#42c5fa",
+      color: '#42c5fa',
       opacity: 0.7,
       width: 1.5
     },
     move: {
       enable: true,
       speed: 3,
-      direction: "none",
+      direction: 'none',
       random: false,
       straight: false,
-      out_mode: "out",
+      out_mode: 'out',
       bounce: false,
       attract: {
         enable: false,
@@ -159,15 +161,15 @@ const particleParams = {
     }
   },
   interactivity: {
-    detect_on: "canvas",
+    detect_on: 'canvas',
     events: {
       onhover: {
         enable: true,
-        mode: ["bubble", "repulse"]
+        mode: ['bubble', 'repulse']
       },
       onclick: {
         enable: true,
-        mode: "push"
+        mode: 'push'
       },
       resize: true
     },

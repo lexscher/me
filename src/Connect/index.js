@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-// import Particles from "react-particles-js";
-// import Party from "../Party";
+import React, { Component } from 'react';
 
 class Connect extends Component {
   constructor() {
@@ -9,44 +7,44 @@ class Connect extends Component {
       interwebs: [
         {
           name: `LinkedIn's Like... Really "In" now.`,
-          link: "https://www.linkedin.com/in/alexanderschelchere/"
+          link: 'https://www.linkedin.com/in/alexanderschelchere/'
         },
         {
-          name: "Gotta Commit. Onwards to GitHub!",
-          link: "https://github.com/Lexscher"
+          name: 'Gotta Commit. Onwards to GitHub!',
+          link: 'https://github.com/Lexscher'
         },
         {
-          name: "That one time I wrote something on Medium.",
-          link: "https://medium.com/@lexscher"
+          name: 'That one time I wrote something on Medium.',
+          link: 'https://medium.com/@lexscher'
         },
         {
-          name: "Tag me on Instagram!",
-          link: "https://instagram.com/arexamder"
+          name: 'Tag me on Instagram!',
+          link: 'https://instagram.com/arexamder'
         },
         {
-          name: "@ me on Twitter!",
-          link: "https://twitter.com/arexamder"
+          name: '@ me on Twitter!',
+          link: 'https://twitter.com/arexamder'
         },
         {
-          name: "My Résumé.",
+          name: 'My Résumé.',
           link:
-            "https://drive.google.com/open?id=1MtHKnRh6u_jSDg3BXO9mrddnwJ-5z00M"
+            'https://drive.google.com/open?id=1MtHKnRh6u_jSDg3BXO9mrddnwJ-5z00M'
         }
       ],
-      name: "",
-      email: "",
-      message: ""
+      name: '',
+      email: '',
+      message: ''
     };
   }
 
   handleInputChange = event => {
-    let { name, value } = event.target
-    this.setState({ [name]: value})
-  }
+    let { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
 
   handleSubmit = event => {
     event.preventDefault();
-  }
+  };
 
   render() {
     let socials = this.state.interwebs.map((link, index) => (
@@ -66,9 +64,7 @@ class Connect extends Component {
         <h2>
           <u>Find me on the internet.</u>
         </h2>
-        <div className="social-media">
-          {socials}
-        </div>
+        <div className="social-media">{socials}</div>
       </div>
     );
   }

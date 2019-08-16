@@ -228,6 +228,7 @@ input, textarea {
 
 .projects-container {
   display: flex;
+  flex-direction: column;
   overflow-x: scroll;
 }
 
@@ -319,9 +320,7 @@ footer h3 {
   .about-img {
     height: 280px;
   }
-  .projects-container {
-    flex-direction: column;
-  }
+
   .tech-container {
     flex-wrap: wrap;
   }

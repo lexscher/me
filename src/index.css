@@ -1,8 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Asul', sans-serif;
-  background-color: #885757;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  background-color: #010b13;
   color: #42c5fa;
 }
 
@@ -330,7 +331,7 @@ footer h3 {
 /* Now let's break it down! */
 @media only screen and (max-width: 1007px) {
   body {
-    background-color: #370c3d;
+    background-color: #010b13;
   }
   .about-img {
     height: 280px;
@@ -366,7 +367,7 @@ footer h3 {
 
 @media only screen and (max-width: 601px) {
   body {
-    background-color: #060f26;
+    background-color: #010b13;
   }
   .about-img {
     height: 275px;

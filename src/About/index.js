@@ -46,8 +46,7 @@ class About extends Component {
               .
             </p>
             <p>
-              I'm also a cellist! I went to a
-              {' '}
+              I'm also a cellist! I went to a{' '}
               <a
                 className="about-link"
                 href="https://www.google.com/search?q=talent+unlimited+high+school&rlz=1C5CHFA_enUS738US738&oq=talent+un&aqs=chrome.0.0j69i57j69i60j69i61j0j35i39.4192j0j4&sourceid=chrome&ie=UTF-8"
@@ -95,7 +94,7 @@ class About extends Component {
 const particleParams = {
   particles: {
     number: {
-      value: 40,
+      value: 200,
       density: {
         enable: true,
         value_area: 800

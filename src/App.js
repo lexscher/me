@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Home from "./Home";
-import Projects from "./Projects";
-import FindMe from "./FindMe";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import Connect from "./Connect";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Game from "./Game";
+import Sorry from "./Sorry";
+
+
 
 class App extends Component {
   render() {
@@ -27,21 +31,18 @@ class App extends Component {
             <Link className="links" to="/LinkUp" onClick={toTheTop}>
               Find Me.
             </Link>
+            {/* <Link className="links" to="/game">
+              Play a Game?!
+            </Link> */}
           </nav>
           <div className="content">
-            <Route
-              exact
-              path="/me"
-              render={() => (
-                <h1 className="greetings">
-                  Please, use the navigation bar above.
-                </h1>
-              )}
-            />
-            <Route exact path="/" render={() => <Home />} />
-            <Route exact path="/Projects" render={() => <Projects />} />
-            <Route exact path="/LinkUp" render={() => <FindMe />} />
-            <Route from="/*" to="/" />
+            <Switch>
+              <Route exact path="/" render={() => <About />} />
+              <Route exact path="/connect" render={() => <Connect />} />
+              <Route exact path="/projects" render={() => <Portfolio />} />
+              {/* <Route exact path="/game" render={() => <Game />} /> */}
+              <Route component={Sorry} />
+            </Switch>
           </div>
           <footer>
             <h3>Built by Alexander Schelchere using React.</h3>

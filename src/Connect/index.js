@@ -17,7 +17,7 @@ class Connect extends Component {
         },
         {
           name: "That one time I wrote something on Medium.",
-          link: "https://medium.com/@ascellie"
+          link: "https://medium.com/@lexscher"
         },
         {
           name: "Tag me on Instagram!",
@@ -30,37 +30,21 @@ class Connect extends Component {
         {
           name: "My Résumé.",
           link:
-            "https://drive.google.com/open?id=16fGCDC3jH5FJ7fyre-O0NQOb69qHyJYm"
+            "https://drive.google.com/open?id=1MtHKnRh6u_jSDg3BXO9mrddnwJ-5z00M"
         }
       ],
       name: "",
       email: "",
       message: ""
     };
-
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handleMessageChange = this.handleMessageChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleNameChange(event) {
-    console.log(event.target.value);
-    this.setState({ name: event.target.value });
+  handleInputChange = event => {
+    let { name, value } = event.target
+    this.setState({ [name]: value})
   }
 
-  handleEmailChange(event) {
-    console.log(event.target.value);
-    this.setState({ email: event.target.value });
-  }
-
-  handleMessageChange(event) {
-    console.log(event.target.value);
-    this.setState({ message: event.target.value });
-  }
-
-  handleSubmit(event) {
-    console.log("An email was submitted: " + this.state.value);
+  handleSubmit = event => {
     event.preventDefault();
   }
 
@@ -84,25 +68,7 @@ class Connect extends Component {
         </h2>
         <div className="social-media">
           {socials}
-          {/* <h3 id="contact-me" className="about-link">
-            You can email me, too!
-          </h3> */}
         </div>
-        {/* <div className="form-container">
-          <form
-            action="mailto:ascellie@gmail.com"
-            method="post"
-            enctype="text/plain"
-            onSubmit={this.handleSubmit}
-          >
-
-            <input className="form-info" type="text" name="name" placeholder="Name" value={this.state.value} onChange={this.handleNameChange} />
-            <input className="form-info" type="email" name="mail" placeholder="E-Mail" value={this.state.value} onChange={this.handleEmailChange} />
-            <textarea className="form-message" name="comment" rows="7" cols="48" placeholder="Write your message here..." value={this.state.value} onChange={this.handleMessageChange} />
-            <input className="form-button" type="submit" value="Submit" />
-
-          </form>
-        </div> */}
       </div>
     );
   }

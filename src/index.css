@@ -265,8 +265,9 @@ input, textarea {
   height: 50px;
 }
 .game-container {
+  top: -0.5rem;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   background-color: #000405;
 }

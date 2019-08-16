@@ -18,10 +18,6 @@ class Connect extends Component {
           link: 'https://medium.com/@lexscher'
         },
         {
-          name: 'Tag me on Instagram!',
-          link: 'https://instagram.com/arexamder'
-        },
-        {
           name: '@ me on Twitter!',
           link: 'https://twitter.com/arexamder'
         },

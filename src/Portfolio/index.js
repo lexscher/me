@@ -22,7 +22,7 @@ class Portfolio extends Component {
           app_link: 'https://you-need-to-cut-it.herokuapp.com/',
           github_link: 'https://github.com/Lexscher/Haircut_Gallery',
           technologies: [
-            'Ruby on Rails',
+            'Rails',
             'BCrypt',
             'Auth',
             'JWT Sessions',

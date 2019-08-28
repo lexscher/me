@@ -21,13 +21,13 @@ class App extends Component {
         <div className="container">
           <nav className="nav-bar">
             <Link className="links" to="/" onClick={toTheTop}>
-              Home.
+              Home
             </Link>
             <Link className="links" to="/Projects" onClick={toTheTop}>
-              Portfolio.
+              Portfolio
             </Link>
             <Link className="links" to="/Connect" onClick={toTheTop}>
-              Connect.
+              Connect
             </Link>
             {/* <Link className="links" to="/game">
               Play a Game?!

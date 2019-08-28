@@ -18,8 +18,8 @@ class Portfolio extends Component {
           name: 'EcoDB',
           screenshot_url: 'https://i.imgur.com/6oWHwbsh.png',
           description:
-            "An api with data of the world's rural environment and land use!",
-          app_link: 'https://ecodb.herokuapp.com/api/countries',
+            "An api with data on the state of the global environment! (still growing 🌱)",
+          app_link: 'https://ecodb.herokuapp.com/',
           github_link: 'https://github.com/Lexscher/ecodb',
           technologies: ['NodeJS', 'Express', 'Puppeteer']
         },

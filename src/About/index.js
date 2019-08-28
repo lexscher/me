@@ -18,7 +18,10 @@ class About extends Component {
           <Particles className="partycles" params={particleParams} />
         </header>
         <div className="about-body">
-          <Particles className="particles" params={particleParams} />
+          <div styles={flexStyle}>
+            <Particles className="particles" params={particleParams} />
+            <Particles className="particles" params={particleParams} />
+          </div>
           <div className="words">
             <p>
               Hello, world! <br />
@@ -46,7 +49,8 @@ class About extends Component {
               .
             </p>
             <p>
-              I'm also a cellist! I went to a{' '}
+              I'm also a cellist! I went to a
+              {' '}
               <a
                 className="about-link"
                 href="https://www.google.com/search?q=talent+unlimited+high+school&rlz=1C5CHFA_enUS738US738&oq=talent+un&aqs=chrome.0.0j69i57j69i60j69i61j0j35i39.4192j0j4&sourceid=chrome&ie=UTF-8"
@@ -82,15 +86,21 @@ class About extends Component {
               technology!
             </p>
           </div>
-          <Particles className="particles" params={particleParams} />
+          <div styles={flexStyle}>
+            <Particles className="particles" params={particleParams} />
+            <Particles className="particles" params={particleParams} />
+          </div>
         </div>
       </div>
     );
   }
 }
 
-// kinda remembered the stylesheet and stackNavigator in React Native.
-// Making a constant to hold the parameters, and then passing it to the Particles seems a lot cleaner.
+const flexStyle = {
+  display: 'flex',
+  flexDirection: 'column'
+};
+
 const particleParams = {
   particles: {
     number: {
@@ -101,21 +111,13 @@ const particleParams = {
       }
     },
     color: {
-      value: '#f00'
+      value: '#fff'
     },
     shape: {
       type: 'circle',
       stroke: {
         width: 2,
-        color: '#8B0000'
-      },
-      polygon: {
-        nb_sides: 5
-      },
-      image: {
-        src: 'https://i.imgur.com/RYVm3qh.jpg',
-        width: 100,
-        height: 100
+        color: '#42c5fa'
       }
     },
     opacity: {
@@ -129,12 +131,12 @@ const particleParams = {
       }
     },
     size: {
-      value: 8,
+      value: 1.8,
       random: true,
       anim: {
         enable: false,
         speed: 10,
-        size_min: 0.1,
+        size_min: 0.41,
         sync: false
       }
     },
@@ -143,7 +145,7 @@ const particleParams = {
       distance: 125,
       color: '#42c5fa',
       opacity: 0.7,
-      width: 1.5
+      width: 0.5
     },
     move: {
       enable: true,
@@ -165,30 +167,31 @@ const particleParams = {
     events: {
       onhover: {
         enable: true,
-        mode: ['bubble', 'repulse']
+        mode: ['grab']
       },
       onclick: {
         enable: true,
-        mode: 'push'
+        mode: 'repulse'
       },
       resize: true
     },
     modes: {
       grab: {
-        distance: 100,
+        distance: 115,
         line_linked: {
-          opacity: 0.2
+          opacity: 0.7,
+          width: 0.3
         }
       },
       bubble: {
         distance: 150,
         size: 4,
-        duration: 2,
-        opacity: .5,
-        speed: 3
+        duration: 1,
+        opacity: 0.5,
+        speed: 7
       },
       repulse: {
-        distance: 42,
+        distance: 55,
         duration: 1
       },
       push: {

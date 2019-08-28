@@ -39,7 +39,7 @@ class App extends Component {
               <Route exact path="/connect" render={() => <Connect />} />
               <Route exact path="/projects" render={() => <Portfolio />} />
               {/* <Route exact path="/game" render={() => <Game />} /> */}
-              <Route component={Sorry} />
+              <Route path="/*" component={Sorry} />
             </Switch>
           </div>
           <footer>

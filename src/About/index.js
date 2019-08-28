@@ -94,20 +94,20 @@ class About extends Component {
 const particleParams = {
   particles: {
     number: {
-      value: 200,
+      value: 105,
       density: {
         enable: true,
         value_area: 800
       }
     },
     color: {
-      value: '#fff'
+      value: '#f00'
     },
     shape: {
       type: 'circle',
       stroke: {
         width: 2,
-        color: '#000'
+        color: '#8B0000'
       },
       polygon: {
         nb_sides: 5
@@ -119,7 +119,7 @@ const particleParams = {
       }
     },
     opacity: {
-      value: 0.1,
+      value: 1,
       random: false,
       anim: {
         enable: false,
@@ -147,7 +147,7 @@ const particleParams = {
     },
     move: {
       enable: true,
-      speed: 3,
+      speed: 1,
       direction: 'none',
       random: false,
       straight: false,
@@ -175,27 +175,27 @@ const particleParams = {
     },
     modes: {
       grab: {
-        distance: 125,
+        distance: 100,
         line_linked: {
           opacity: 0.2
         }
       },
       bubble: {
-        distance: 200,
+        distance: 150,
         size: 4,
         duration: 2,
-        opacity: 1,
+        opacity: .5,
         speed: 3
       },
       repulse: {
-        distance: 75,
-        duration: 0.4
+        distance: 42,
+        duration: 1
       },
       push: {
-        particles_nb: 5
+        particles_nb: 3
       },
       remove: {
-        particles_nb: 2
+        particles_nb: 1
       }
     }
   },

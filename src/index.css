@@ -19,25 +19,26 @@ body {
 }
 
 .nav-bar {
-  font-family: 'Cormorant SC', serif;
+  font-family: 'Alegreya', serif;
   display: flex;
-  background-color: #000;
+  background-color: #010b13;
   width: 100vw;
   align-items: center;
   justify-content: space-around;
   padding: 8px 4px;
-  border-bottom: 5px double #42c5fa;
+  border-left: 13px solid black;
+  border-right: 13px solid black;
   top: 0;
   position: fixed;
 }
 
 .links {
   text-decoration: none;
-  color: #edf1e8;
+  color: #42c5fa;
 }
 
 .links:hover {
-  text-decoration: underline overline;
+  text-decoration: underline;
   text-decoration-color: rgba(66, 197, 250, 0.8);
   text-shadow: 1px 1px 2px #42c5fa, 0 0 25px #885757, 0 0 5px #000;
 }
@@ -76,7 +77,7 @@ body {
 
 .partycles {
   height: 48vh;
-  width: 30vw;
+  width: 40vw;
   flex-basis: 40%;
   overflow: visible;
 }
@@ -293,15 +294,15 @@ input, textarea {
   white-space: nowrap;
   padding: 5px 7px;
   margin: 0 12px;
-  color: white;
+  color: #42c5fa;
   height: 24px;
   text-shadow: 5px 5px 10px #000, 0 0 50px #000, 0 0 25px #fff;
 }
 
 footer {
-  color: rgba(255, 255, 255, 0.938);
+  color: #42c5fa;
   width: 60%;
-  border-top: 4px solid #edf1e8;
+  border-top: 4px solid #42c5fa;
   margin-top: 35px;
   text-align: center;
 }

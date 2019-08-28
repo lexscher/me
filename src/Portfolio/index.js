@@ -15,21 +15,13 @@ class Portfolio extends Component {
           technologies: ['HTML', 'CSS', 'JavaScript', 'jQuery']
         },
         {
-          name: 'Cut It',
-          screenshot_url:
-            'https://raw.githubusercontent.com/Lexscher/me/master/src/images/cut-it.png',
-          description: 'View and add to a gallery of haircuts!',
-          app_link: 'https://you-need-to-cut-it.herokuapp.com/',
-          github_link: 'https://github.com/Lexscher/Haircut_Gallery',
-          technologies: [
-            'Rails',
-            'BCrypt',
-            'Auth',
-            'JWT Sessions',
-            'React',
-            'JavaScript',
-            'CSS'
-          ]
+          name: 'EcoDB',
+          screenshot_url: 'https://i.imgur.com/6oWHwbsh.png',
+          description:
+            "An api with data on the state of the global environment! (still growing 🌱)",
+          app_link: 'https://ecodb.herokuapp.com/',
+          github_link: 'https://github.com/Lexscher/ecodb',
+          technologies: ['NodeJS', 'Express', 'Puppeteer']
         },
         {
           name: 'Concipilo',

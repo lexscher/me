@@ -1,10 +1,6 @@
-## Friends, Romans, Countrymen! Lend me your - erm..
-
-well, what I _meant_ to say was
-
 # Welcome!
 
-This is the readme for my portfolio, built on React!
+This is the readme for my portfolio, built with React!
 
 There are plenty of cool things here~
 

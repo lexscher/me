@@ -1,0 +1,29 @@
+{
+  "name": "me",
+  "version": "1.0.0",
+  "description": "My portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lexscher/me.git"
+  },
+  "keywords": [
+    "webpack",
+    "react",
+    "typescript",
+    "sass",
+    "css",
+    "babel",
+    "portfolio",
+    "alexanderschelchere"
+  ],
+  "author": "Alexander Schelchere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lexscher/me/issues"
+  },
+  "homepage": "https://github.com/Lexscher/me#readme"
+}

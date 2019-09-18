@@ -1,0 +1,11 @@
+body {
+  font-size: $default-font-size;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: $color-white;
+  color: $color-secondary-dark;
+  font-family: $font-primary;
+  p {
+    font-family: $font-secondary;
+  }
+}

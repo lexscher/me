@@ -13,27 +13,33 @@ const Me = () => {
       <header>
         <NavBar />
       </header>
-      <Route exact path="/" render={routerProps => <Home {...routerProps} />} />
-      <Route
-        exact
-        path="/About"
-        render={routerProps => <About {...routerProps} />}
-      />
-      <Route
-        exact
-        path="/Projects"
-        render={routerProps => <Projects {...routerProps} />}
-      />
-      <Route
-        exact
-        path="/Connect"
-        render={routerProps => <Connect {...routerProps} />}
-      />
-      <Route
-        exact
-        path="/Archives"
-        render={routerProps => <Archives {...routerProps} />}
-      />
+      <div className="app">
+        <Route
+          exact
+          path="/"
+          render={routerProps => <Home {...routerProps} />}
+        />
+        <Route
+          exact
+          path="/About"
+          render={routerProps => <About {...routerProps} />}
+        />
+        <Route
+          exact
+          path="/Projects"
+          render={routerProps => <Projects {...routerProps} />}
+        />
+        <Route
+          exact
+          path="/Connect"
+          render={routerProps => <Connect {...routerProps} />}
+        />
+        <Route
+          exact
+          path="/Archives"
+          render={routerProps => <Archives {...routerProps} />}
+        />
+      </div>
     </Switch>
   );
 };

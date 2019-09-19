@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [menuBarSelected, toggleMenuBarSelected] = useState(false);
@@ -20,12 +21,17 @@ const NavBar = () => {
         ></div>
       </div>
       {menuBarSelected ? (
-        <div className="menu dropdown">
-          <h1>Home</h1>
-          <h1>About</h1>
-          <h1>Projects</h1>
-          <h1>Connect</h1>
-          <h1>Archives</h1>
+        <div className="menu">
+          <div
+            className="dropdown"
+            onClick={() => toggleMenuBarSelected(!menuBarSelected)}
+          >
+            <Link to="/">Home</Link>
+            <Link to="/About">About</Link>
+            <Link to="/Projects">Projects</Link>
+            <Link to="/Connect">Connect</Link>
+            <Link to="/Archives">Archives</Link>
+          </div>
         </div>
       ) : (
         ''

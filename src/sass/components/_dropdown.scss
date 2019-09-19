@@ -34,11 +34,11 @@
     }
 
     &:hover {
-      box-shadow: inset 100vw 0 0 0 $color-grey-light;
-    }
-
-    &:active {
+      box-shadow: inset 100vw 0 0 0 $color-grey-dark;
       color: $color-primary-light;
     }
+
+    // &:active {
+    // }
   }
 }

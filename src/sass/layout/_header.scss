@@ -1,0 +1,44 @@
+header {
+  background-color: $color-primary-light;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    .menu-bars-container {
+      justify-self: center;
+      align-self: flex-end;
+      display: inline-block;
+      cursor: pointer;
+      padding: .5rem;
+
+      .menu-bar {
+        display: block;
+        width: 3.5rem;
+        height: 0.5rem;
+        background-color: $color-secondary-dark;
+        margin: 0.6rem 0.4rem;
+        transition: 0.4s;
+
+        &:nth-last-child(3).menu-clicked {
+          transform: rotate(-45deg) translate(-0.9rem, 0.9rem);
+          border: solid 0.2rem $color-secondary-dark;
+        }
+
+        &:nth-last-child(2).menu-clicked {
+          opacity: 0;
+        }
+
+        &:nth-last-child(1).menu-clicked {
+          transform: rotate(405deg) translate(-0.6rem, -0.6rem);
+          background-color: $color-tertiary-light;
+          border: solid 0.2rem $color-secondary-dark;
+        }
+      }
+    }
+  }
+}

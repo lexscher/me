@@ -1,0 +1,44 @@
+.dropdown {
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  transition: 0.4s;
+
+  &:active{
+    animation: fadeOut .4s;
+  }
+
+  a {
+    opacity: 0.97;
+    background-color: $color-secondary-light;
+    font-family: $font-secondary;
+    font-size: 5rem;
+    color: $color-secondary-dark;
+    text-decoration: none;
+    display: block;
+    box-shadow: inset 0 0 0 0.01rem $color-secondary-light;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+
+    @for $i from 1 to 6 {
+      &:nth-child(#{$i}) {
+        animation: moveInBottom #{$i * 0.1s};
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 0.05rem solid $color-primary-light;
+    }
+
+    &:hover {
+      box-shadow: inset 100vw 0 0 0 $color-grey-light;
+    }
+
+    &:active {
+      color: $color-primary-light;
+    }
+  }
+}

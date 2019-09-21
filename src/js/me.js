@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import NavBar from './NavBar';
-import Home from './Home';
-import About from './About';
-import Projects from './Projects';
-import Connect from './Connect';
-import Archives from './Archives';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Projects from './Pages/Projects';
+import Connect from './Pages/Connect';
+import Archives from './Pages/Archives';
 
 const Me = () => {
   return (
@@ -26,7 +26,7 @@ const Me = () => {
         />
         <Route
           exact
-          path="/Projects"
+          path="/projects"
           render={routerProps => <Projects {...routerProps} />}
         />
         <Route

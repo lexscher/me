@@ -7,7 +7,10 @@ $font-primary: 'PT Sans Caption', sans-serif;
 $font-secondary: 'Cute Font', cursive;
 
 // size
-$default-font-size: 1.6rem;
+$font-size-default: 1.6rem;
+$font-size-ms: 2.0rem;
+$font-size-medium: 2.4rem;
+$font-size-large: 3.2rem;
 
 /* ----------------- COLORS ----------------- */
 
@@ -29,3 +32,18 @@ $color-grey-light: #c1c1c1;
 $color-grey: #808080;
 $color-grey-dark: #3f3f3f;
 $color-black: #000;
+
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;

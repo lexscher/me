@@ -1,5 +1,6 @@
 // Abstracts
 @import './abstracts/variables';
+@import './abstracts/mixins';
 
 // Base
 @import './base/base';
@@ -12,3 +13,8 @@
 
 // Components
 @import './components/dropdown';
+@import './components/button';
+@import './components/card';
+
+// Pages
+@import './pages/projects';

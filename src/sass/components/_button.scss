@@ -1,16 +1,21 @@
-
 // Project Buttons
 .projects {
   button {
     border: 0;
-    height: 1.5rem;
-    padding: 0 1.5rem;
-    background-color: $color-tertiary-light;
+    height: 2.5rem;
+    padding: .7rem 1.5rem;
+    background-color: $color-primary;
     cursor: pointer;
     border-radius: 0.1rem;
+    color: $color-grey-dark;
 
     &:focus {
       outline: none;
+    }
+
+    &:disabled {
+      background-color: $color-grey-light;
+      cursor: not-allowed;
     }
   }
 }

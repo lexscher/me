@@ -31,6 +31,7 @@ const Projects = () => {
         changeSortedRepos('pushed');
         break;
     }
+    handlePageChange('first');
   };
 
   // Change page
@@ -105,7 +106,7 @@ const Projects = () => {
       created_at,
       updated_at
     } = repo;
-    // debugger;
+
     return (
       <Project
         key={id}
@@ -124,7 +125,6 @@ const Projects = () => {
     <div className="projects">
       <h1>Projects</h1>
       <div className="projects-sort-controller">
-        
         <button onClick={() => handleReposReSort('full_name')}>
           <p>NAME</p>
         </button>

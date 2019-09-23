@@ -131,7 +131,7 @@ const Projects = () => {
         <button onClick={() => handleReposReSort('created')}>
           <p>CREATED</p>
         </button>
-        <p>{'< FILTER >'}</p>
+
         <button onClick={() => handleReposReSort('updated')}>
           <p>LAST UPDATED</p>
         </button>

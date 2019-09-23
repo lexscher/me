@@ -7,9 +7,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: solid 0.1rem $color-tertiary-light;
+  border: solid 0.1rem $color-primary;
   border-radius: 0.1rem;
-  background-color: $color-grey;
+  background-color: $color-grey-dark;
   color: $color-primary-light;
   white-space: nowrap;
   transition: ease-in;
@@ -25,16 +25,7 @@
   }
 
   h2 {
-    color: $color-tertiary-light;
-  }
-  a {
-    transition: 0.2s;
-    text-decoration: none;
-    color: $color-tertiary-light;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    color: $color-primary;
   }
 
   &:hover {

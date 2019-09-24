@@ -26,19 +26,19 @@ const Project = props => {
         'MMMM Do YYYY, h:mm:ss a'
       )}`}</code>
       {homepage ? (
-        <code>
+        <p>
           <a href={homepage} target="_blank">
             View Homepage
           </a>
-        </code>
+        </p>
       ) : (
         ''
       )}
-      <code>
+      <p>
         <a href={url} target="_blank">
           View on GitHub
         </a>
-      </code>
+      </p>
     </div>
   );
 };

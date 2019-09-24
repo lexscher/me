@@ -160,7 +160,7 @@ const Projects = () => {
                 <p>PREV</p>
               </button>
             ]}
-        <p>PAGE {currentPage + 1}</p>
+        <p>PAGE {currentPage + 1}/33</p>
         {currentPage == 32
           ? [
               <button disabled>

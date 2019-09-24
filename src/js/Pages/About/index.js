@@ -39,7 +39,10 @@ const About = () => {
             <code>React, Redux, React Hooks</code>
           </li>
           <li className="skill">
-            <code>Webpack & Babel</code>
+            <code>Webpack</code>
+          </li>
+          <li className="skill">
+            <code>Babel</code>
           </li>
           <li className="skill">
             <code>Adobe Creative Cloud</code>

@@ -16,12 +16,12 @@ const Me = () => {
       <div className="app">
         <Route
           exact
-          path="/"
+          path="/Home"
           render={routerProps => <Home {...routerProps} />}
         />
         <Route
           exact
-          path="/About"
+          path="/"
           render={routerProps => <About {...routerProps} />}
         />
         <Route

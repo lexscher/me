@@ -1,38 +1,37 @@
 /* ----------------- FONTS ----------------- */
 // Import
-@import url('https://fonts.googleapis.com/css?family=Cute+Font|PT+Sans+Caption:700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap");
 
 // faimilies
-$font-primary: 'PT Sans Caption', sans-serif;
-$font-secondary: 'PT Sans Caption', sans-serif;
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Roboto", sans-serif;
 
 // size
 $font-size-default: 1.6rem;
-$font-size-ms: 2.0rem;
+$font-size-ms: 2rem;
 $font-size-medium: 2.4rem;
 $font-size-large: 3.2rem;
 
 /* ----------------- COLORS ----------------- */
 
-$color-primary: #a7c9e3;
-$color-primary-light: #d5e6f4;
-$color-primary-dark: #6ab1e7;
+$color-primary: #cfa7e3;
+$color-primary-light: #e6d5f4;
+$color-primary-dark: #ad6ae7;
 
-$color-secondary: #853737;
-$color-secondary-light: #ff938b;
-$color-secondary-dark: #411b1b;
+$color-secondary: #c71414;
+$color-secondary-light: #ff3a3a;
+$color-secondary-dark: #740404;
 
 $color-tertiary: #82508b;
 $color-tertiary-light: #e3b9ed;
 $color-tertiary-dark: #5e2f68;
 
 // SHADES
-$color-white: #fff;
+$color-white: #f4faff;
 $color-grey-light: #c1c1c1;
 $color-grey: #808080;
 $color-grey-dark: #3f3f3f;
-$color-black: #000;
-
+$color-black: #08090a;
 
 /* ----------------- MEDIA QUERIES ----------------- */
 

@@ -1,32 +1,37 @@
 header {
-  background-color: $color-primary-light;
+  background-color: rgba($color: $color-white, $alpha: 0.5);
   height: 7vh;
   display: flex;
   justify-content: center;
-  
+
   .nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+
     .menu-bars-container {
       justify-self: center;
       align-self: flex-end;
       display: inline-block;
       cursor: pointer;
-      padding: .5rem;
+      padding: 0.5rem;
+
+      @include lg {
+        display: none;
+      }
 
       .menu-bar {
         display: block;
         width: 3.5rem;
         height: 0.5rem;
-        background-color: $color-grey-dark;
+        background-color: $color-black;
         margin: 0.6rem 0.4rem;
         transition: 0.4s;
 
         &:nth-last-child(3).menu-clicked {
           transform: rotate(-45deg) translate(-0.9rem, 0.9rem);
-          border: solid 0.2rem $color-grey-dark;
+          border: solid 0.2rem $color-black;
         }
 
         &:nth-last-child(2).menu-clicked {

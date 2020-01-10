@@ -1,0 +1,15 @@
+footer {
+  bottom: 0;
+  width: 100vw;
+  background-color: $color-black;
+  color: $color-white;
+  
+  > div#footer {
+      width: 100%;
+      height: 20vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+}

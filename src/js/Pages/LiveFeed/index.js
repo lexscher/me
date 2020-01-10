@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Project from "../../Components/Project";
 
-const Projects = () => {
+const LiveFeed = () => {
   // Handle Repositories
   const [gitHubRepos, setgitHubRepos] = useState([]);
   const [reposLoaded, toggleReposLoaded] = useState(false);
@@ -121,9 +121,9 @@ const Projects = () => {
     );
   });
 
-  return (
-    <div id="projects">
-      <h1>Projects</h1>
+  const liveFeedJsx = () => (
+    <div id="live-feed">
+      <h1>GitHub Live Feed</h1>
       <div className="projects-sort-controller">
         <button onClick={() => handleReposReSort("full_name")}>
           <p>NAME</p>
@@ -192,7 +192,9 @@ const Projects = () => {
             ]}
       </div>
     </div>
-  );
+  )
+
+  return liveFeedJsx();
 };
 
-export default Projects;
+export default LiveFeed;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const About = () => {
   const aboutMe = () => (
@@ -75,13 +75,15 @@ const About = () => {
     </div>
   );
 
-  return (
-    <div className="about-page">
+  const aboutJsx = () => (
+    <div id="about">
       <h1>About</h1>
       {/* Toggle for About Me and About You -- Conditinally render cards below */}
       {aboutMe()}
     </div>
   );
+
+  return aboutJsx();
 };
 
 export default About;

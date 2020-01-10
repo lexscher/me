@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Archives = () => {
   const getVersions = () => {
@@ -27,20 +27,25 @@ const Archives = () => {
     );
   };
 
-  return (
-    <div className="archives-page">
-      <h1>Archives</h1>
-      <h5>
-        SAVED PREVIOUS VERSIONS OF THIS WEBSITE VIA{' '}
-        <a href="https://archive.org/web/" target="_blank">
-          WAYBACK MACHINE
-        </a>
-        .
-      </h5>
-
-      {getVersions()}
+  const archivesJsx = () => (
+    <div id="archives">
+        <p>
+          SAVED PREVIOUS VERSIONS OF THIS WEBSITE VIA{" "}
+          <a href="https://archive.org/web/" target="_blank">
+            WAYBACK MACHINE
+          </a>
+          .
+        </p>
+      <div className="archive-list-container">
+        {getVersions()}
+      </div>
+      <div className="archive-view-container">
+        <h1>Showing single arcive</h1>
+      </div>
     </div>
   );
+
+  return archivesJsx();
 };
 
 export default Archives;

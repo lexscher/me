@@ -4,8 +4,8 @@ const Connect = () => {
   // Create SVG's
   const gitHubSVG = () => (
     <svg
-      width="96"
-      height="96"
+      width="16"
+      height="16"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -17,8 +17,8 @@ const Connect = () => {
   );
   const linkedInSVG = () => (
     <svg
-      width="96"
-      height="96"
+      width="16"
+      height="16"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -30,8 +30,8 @@ const Connect = () => {
   );
   const twitterSVG = () => (
     <svg
-      width="96"
-      height="96"
+      width="16"
+      height="16"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -43,8 +43,8 @@ const Connect = () => {
   );
   const mediumSVG = () => (
     <svg
-      width="96"
-      height="96"
+      width="16"
+      height="16"
       xmlns="http://www.w3.org/2000/svg"
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -56,10 +56,23 @@ const Connect = () => {
       <path d="M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795h6.633v.403l-1.916 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537v-10.91l-5.389 13.688h-.728l-6.275-13.688v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404h-7.148v-.404l2.521-3.058c.27-.279.39-.67.325-1.052v-10.608z" />
     </svg>
   );
+  const youTubeSVG = () => (
+    <svg
+      width="16"
+      height="16"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <title id="title" lang="en">
+        Resume
+      </title>
+      <path d="M11 9c1.361-5.928 8-7 8-7v-2l4 3.982-4 4.018v-2s-5.102-.104-8 3zm5 1h-10v1h10v-1zm3 .835v2.708c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h10.741c1.176-.758 2.35-1.242 3.259-1.541v-.459h-16v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-5.561l-2 2.01zm-13 3.165h10v-1h-10v1zm3.609-7h-3.609v1h3.266l.343-1z" />
+    </svg>
+  );
   const resumeSVG = () => (
     <svg
-      width="96"
-      height="96"
+      width="16"
+      height="16"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -71,8 +84,7 @@ const Connect = () => {
   );
 
   return (
-    <div className="connect-page">
-      <h1>Connect With Me</h1>
+    <div className="connect-tab">
       <div className="social-media">
         <a
           href="https://www.linkedin.com/in/alexanderschelchere/"

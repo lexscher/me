@@ -1,5 +1,28 @@
-.archives-page {
-  ul {
-    list-style-type: square;
+#archives {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  > div {
+    height: 40rem;
+  }
+
+  .archive-list-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul {
+      list-style-type: square;
+    }
+  }
+
+  .archive-view-container {
+    width: 100%;
+    flex-grow: 2;
   }
 }

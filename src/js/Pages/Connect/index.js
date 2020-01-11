@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import SocialMediaLink from "../../Components/SocialMedia";
 
 const Connect = () => {
+  // set state
+  const [connectMode, toggleConnectMode] = useState(false);
 
-  // Set svg paths to variablses 
+  // Set svg paths to variablses
   const [
     linkedinSvgPath,
     githubSvgPath,
@@ -56,9 +58,21 @@ const Connect = () => {
     <SocialMediaLink key={mediaInfo.id} socialMediaData={mediaInfo} />
   ));
 
+  const connectButton = () => (
+    <button
+      className={!connectMode ? "btn-connect btn-hiding-content" : "btn-connect"}
+      onClick={() => toggleConnectMode(!connectMode)}
+    >
+      {!connectMode ? "✚" : "✘"}
+    </button>
+  );
+
   return (
     <div className="connect-tab">
-      <div className="social-media">{socialMediaLinks}</div>
+      <div className={connectMode ? "social-media animate-social-media" : "social-media"}>
+        {connectMode ? socialMediaLinks : ""}
+      </div>
+        {connectButton()}
     </div>
   );
 };

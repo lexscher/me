@@ -40,7 +40,7 @@ const AboutMe = () => {
           Thai
         </a>{" "}
         or{" "}
-        <a href="" target="_blank">
+        <a href="http://lavillapizza.com/" target="_blank">
           Italian
         </a>{" "}
         cuisine.

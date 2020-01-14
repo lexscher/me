@@ -1,0 +1,75 @@
+#skills {
+  .skills-content {
+    width: 100vw;
+    // height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5rem;
+
+    @include md {
+      flex-direction: row-reverse;
+    }
+
+    [class$="skills-card"] {
+      background-color: $color-white;
+      color: $color-black;
+      height: 45rem;
+      width: 35rem;
+
+      ul {
+        position: static;
+        display: flex;
+        padding: 3rem 2rem;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: inherit;
+        list-style-type: none;
+
+        li {
+          &:hover {
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    .technical-skills-card {
+      margin-bottom: 15rem;
+      div h2 {
+        width: 100%;
+        display: inline-block;
+        text-align: right;
+      }
+      ul {
+        border-top: solid 3rem $color-black;
+        border-right: solid 3rem $color-black;
+      }
+      @include sm {
+        margin-left: 15rem;
+      }
+
+      @include md {
+        margin-left: 0;
+        margin-bottom: 10rem;
+      }
+    }
+
+    .regular-skills-card {
+      ul {
+        border-bottom: solid 3rem $color-black;
+        border-left: solid 3rem $color-black;
+      }
+      @include sm {
+        margin-right: 15rem;
+      }
+
+      @include md {
+        margin-right: 0;
+        margin-top: 15rem;
+      }
+    }
+  }
+}

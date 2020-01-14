@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import Project from "../../Components/Project";
+import Project from "../../Components/FeedProject";
 
 const Projects = () => {
   // Handle Repositories

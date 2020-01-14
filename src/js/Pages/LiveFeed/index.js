@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import Project from "../../Components/Project";
+import Project from "../../Components/FeedProject";
 
 const LiveFeed = () => {
   // Handle Repositories
@@ -121,78 +121,74 @@ const LiveFeed = () => {
     );
   });
 
+  const generateLiveFeedSortConteoller = () => (
+    <div className="live-feed-sort-controller">
+      <button onClick={() => handleReposReSort("full_name")}>
+        <p>NAME</p>
+      </button>
+      <button onClick={() => handleReposReSort("created")}>
+        <p>CREATED</p>
+      </button>
+
+      <button onClick={() => handleReposReSort("updated")}>
+        <p>LAST UPDATED</p>
+      </button>
+      <button onClick={() => handleReposReSort("pushed")}>
+        <p>LASTEST PUSH</p>
+      </button>
+    </div>
+  );
+
+  const generatePageControlls = () => (
+    <div className="live-feed-page-turner">
+      {currentPage == 0
+        ? [
+            <button disabled key="arr-1-btn-1">
+              <p>FIRST PAGE</p>
+            </button>,
+            <button disabled key="arr-1-btn-2">
+              <p>PREV</p>
+            </button>
+          ]
+        : [
+            <button onClick={() => handlePageChange("first")} key="arr-2-btn-1">
+              <p>FIRST PAGE</p>
+            </button>,
+            <button onClick={() => handlePageChange("prev")} key="arr-2-btn-2">
+              <p>PREV</p>
+            </button>
+          ]}
+      <p>PAGE {currentPage + 1}/33</p>
+      {currentPage == 32
+        ? [
+            <button disabled key="arr-3-btn-1">
+              <p>NEXT</p>
+            </button>,
+            <button disabled key="arr-3-btn-2">
+              <p>LAST PAGE</p>
+            </button>
+          ]
+        : [
+            <button onClick={() => handlePageChange("next")} key="arr-4-btn-1">
+              <p>NEXT</p>
+            </button>,
+            <button onClick={() => handlePageChange("last")} key="arr-4-btn-2">
+              <p>LAST PAGE</p>
+            </button>
+          ]}
+    </div>
+  );
+
   const liveFeedJsx = () => (
     <div id="live-feed">
       <h1>GitHub Live Feed</h1>
-      <div className="projects-sort-controller">
-        <button onClick={() => handleReposReSort("full_name")}>
-          <p>NAME</p>
-        </button>
-        <button onClick={() => handleReposReSort("created")}>
-          <p>CREATED</p>
-        </button>
-
-        <button onClick={() => handleReposReSort("updated")}>
-          <p>LAST UPDATED</p>
-        </button>
-        <button onClick={() => handleReposReSort("pushed")}>
-          <p>LASTEST PUSH</p>
-        </button>
+      {generateLiveFeedSortConteoller()}
+      <div className="live-feed-projects-container">
+        {reposLoaded ? projects : <h1>Loading Projects :D</h1>}
       </div>
-      <div className="projects-container">
-        {reposLoaded ? projects : "Loading Projects :D"}
-      </div>
-      <div className="project-page-turner">
-        {currentPage == 0
-          ? [
-              <button disabled key="arr-1-btn-1">
-                <p>FIRST PAGE</p>
-              </button>,
-              <button disabled key="arr-1-btn-2">
-                <p>PREV</p>
-              </button>
-            ]
-          : [
-              <button
-                onClick={() => handlePageChange("first")}
-                key="arr-2-btn-1"
-              >
-                <p>FIRST PAGE</p>
-              </button>,
-              <button
-                onClick={() => handlePageChange("prev")}
-                key="arr-2-btn-2"
-              >
-                <p>PREV</p>
-              </button>
-            ]}
-        <p>PAGE {currentPage + 1}/33</p>
-        {currentPage == 32
-          ? [
-              <button disabled key="arr-3-btn-1">
-                <p>NEXT</p>
-              </button>,
-              <button disabled key="arr-3-btn-2">
-                <p>LAST PAGE</p>
-              </button>
-            ]
-          : [
-              <button
-                onClick={() => handlePageChange("next")}
-                key="arr-4-btn-1"
-              >
-                <p>NEXT</p>
-              </button>,
-              <button
-                onClick={() => handlePageChange("last")}
-                key="arr-4-btn-2"
-              >
-                <p>LAST PAGE</p>
-              </button>
-            ]}
-      </div>
+      {generatePageControlls()}
     </div>
-  )
+  );
 
   return liveFeedJsx();
 };

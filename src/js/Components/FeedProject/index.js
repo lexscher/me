@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const Project = props => {
+const FeedProject = props => {
   const {
     name,
     description,
@@ -15,7 +15,7 @@ const Project = props => {
   let dateUpdated = new Date(updated);
 
   return (
-    <div className="project-card">
+    <div className="live-feed-project-card">
       <h2>
         <code>{name}</code>
       </h2>
@@ -43,4 +43,4 @@ const Project = props => {
   );
 };
 
-export default Project;
+export default FeedProject;

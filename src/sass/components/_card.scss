@@ -1,4 +1,4 @@
-.project-card {
+.live-feed-project-card {
   min-height: 40rem;
   min-width: 35rem;
   width: 40rem;
@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-around;
   border-radius: 0.1rem;
-  background-color: $color-white;
+  background-color: $color-black;
   color: $color-primary-light;
   white-space: nowrap;
   transition: ease-in;

@@ -5,46 +5,81 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: $color-primary;
-}
+  color: $color-white;
+  background-color: $color-white;
 
-.project-page-turner {
-  margin-top: 1rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.projects-sort-controller {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  background-color: $color-grey-dark;
-}
-
-.projects-container {
-  height: 60%;
-  width: 100vw;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  text-align: center;
-  overflow-y: scroll;
-
-  @include lg {
-    flex-direction: row;
-    overflow-x: scroll;
-  }
-
-  @include xl {
+  .projects-container {
+    height: 120rem;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    // overflow-y: scroll;
+
+    div.awssld__content {
+      div {
+        display: flex;
+        height: inherit;
+        width: inherit;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        margin-bottom: 3rem;
+      }
+    }
+
+    [class^="single-project"] {
+      position: relative;
+      background-color: rgba($color: $color-black, $alpha: 0.5);
+      border-radius: 0.5rem;
+      padding: 0.3rem;
+      color: $color-white;
+      z-index: 3;
+      width: 20%;
+
+      &[class$="__title"] {
+        // top: 1rem;
+        // margin-right: 10rem;
+      }
+
+      &[class$="__description"] {
+        // top: 1rem;
+        // margin-right: 10rem;
+      }
+
+      &[class$="__live-link"],
+      &[class$="__source-code-link"] {
+        // top: 1rem;
+        // margin-right: 10rem;
+        cursor: pointer;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+
+      // &[class$="__source-code-link"] {
+      //   // top: 1rem;
+      //   // margin-right: 10rem;
+      //   cursor: pointer;
+      // }
+    }
+
+    @include lg {
+      // height: 90rem;
+      div.awssld {
+        width: 80vw;
+      }
+      // margin: 2.5rem;
+      // width: 95vw;
+      flex-direction: row;
+      overflow-x: scroll;
+    }
+
+    @include xl {
+      justify-content: center;
+    }
   }
-
-
 }

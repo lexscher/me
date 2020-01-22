@@ -1,198 +1,122 @@
 import React, { Fragment, useState, useEffect } from "react";
-import Project from "../../Components/FeedProject";
+import AwesomeSlider from "react-awesome-slider";
+import AwesomeSliderStyles from "react-awesome-slider/src/styled/fall-animation";
+// import { Captioned, CaptionedStyles } from "react-awesome-slider/src/components/*";
+// import Frame from "react-awesome-slider/src/components/react-awesome-frame";
+import Project from "../../Components/FeaturedProject";
 
 const Projects = () => {
-  // Handle Repositories
-  const [gitHubRepos, setgitHubRepos] = useState([]);
-  const [reposLoaded, toggleReposLoaded] = useState(false);
-  // Handle current page
-  const [currentPage, setCurrentPage] = useState(0);
-  const [max, setMax] = useState(3);
-  // handle sort
-  const [sortedRepos, changeSortedRepos] = useState("pushed");
-
-  // Handle repo re-sort
-  const handleReposReSort = sortedParamString => {
-    switch (sortedParamString) {
-      case "full_name":
-        changeSortedRepos("full_name");
-        break;
-      case "created":
-        changeSortedRepos("created");
-        break;
-      case "updated":
-        changeSortedRepos("updated");
-        break;
-      case "pushed":
-        changeSortedRepos("pushed");
-        break;
-
-      default:
-        changeSortedRepos("pushed");
-        break;
+  const [concipilo, chello, ecommunity, ticTacToe, ecoDB] = [
+    {
+      title: "concipilo",
+      description: "A Text Adventure Game",
+      imgUrl: "https://i.imgur.com/VgK74v3.png",
+      liveLink: "https://lexscher.github.io/Concipilo/",
+      sourceCodeLink: "https://github.com/Lexscher/Concipilo"
+    },
+    {
+      title: "Chello",
+      description: "A Trello Clone",
+      imgUrl: "https://i.imgur.com/ahH0L9d.png",
+      liveLink: "https://chello-front-end.herokuapp.com/",
+      sourceCodeLink: "https://github.com/Lexscher/tGRAH-api"
+    },
+    {
+      title: "Eco-mmunity",
+      description: "Reddit Clone",
+      imgUrl: "https://i.imgur.com/Txvz3mN.png",
+      liveLink: "https://lexscher.github.io/eco-mmunity/",
+      sourceCodeLink: "https://github.com/Lexscher/eco-mmunity"
+    },
+    {
+      title: "TicTacToe",
+      description: "Re-created Tic Tac Toe",
+      imgUrl: "https://i.imgur.com/XJlU15L.png",
+      liveLink: "https://lexscher.github.io/Tic-Tac-Toe/",
+      sourceCodeLink: "https://lexscher.github.io/Tic-Tac-Toe/"
+    },
+    {
+      title: "EcoDB",
+      description:
+        "A database with information on the how land is used across the globe.",
+      imgUrl: "https://i.imgur.com/6oWHwbs.png",
+      liveLink: "http://ecodb.herokuapp.com/",
+      sourceCodeLink: "https://github.com/Lexscher/ecodb"
     }
-    handlePageChange("first");
-  };
+  ];
 
-  // Change page
-  const handlePageChange = direction => {
-    switch (direction) {
-      case "next":
-        handleNextPage();
-        return;
-      case "prev":
-        handlePrevPage();
-        return;
-      case "first":
-        setCurrentPage(0);
-        setMax(3);
-        return;
-      case "last":
-        setCurrentPage(32);
-        setMax(99);
-        return;
-      default:
-        return;
-    }
-  };
-  // Next Page
-  const handleNextPage = () => {
-    // We only have ten pages
-    if (currentPage == 33) return;
-    setCurrentPage(currentPage + 1);
-    setMax(max + 3);
-    console.log("PAGE - " + currentPage + "MAX: " + max);
-  };
-  // Previous Page
-  const handlePrevPage = () => {
-    // No 'Page Zero' or lower.
-    if (currentPage == 0) return;
-    setCurrentPage(currentPage - 1);
-    setMax(max - 3);
-    console.log(currentPage);
-  };
+  const [currentProject, swapCurrentPro] = useState(0);
 
-  const fetchRepos = () => {
-    toggleReposLoaded(false);
-    fetch(
-      `https://api.github.com/users/lexscher/repos?sort=${sortedRepos}&per_page=99&page=1`,
-      {
-        headers: {
-          Accept: "application/vnd.github.v3.raw+json"
-        }
-      }
-    )
-      .then(res => res.json())
-      .then(data => {
-        setgitHubRepos([...data]);
-        toggleReposLoaded(true);
-      })
-      .catch(err => {
-        console.error(err);
-        return;
-      });
-  };
+  const projectDataArr = [
+    { ...concipilo },
+    { ...chello },
+    { ...ecommunity },
+    { ...ticTacToe },
+    { ...ecoDB }
+  ];
 
-  useEffect(() => fetchRepos(), [sortedRepos]);
+  // const projectsComponent = (
+  //   <Captioned
+  //     cssModule={CaptionedStyles}
+  //     screens={[
+  //       {
+  //         backgroundColor: "#ad6ae7",
+  //         media: concipilo.imgUrl,
+  //         caption: `${concipilo.title} - ${concipilo.description}`
+  //       },
+  //       {
+  //         backgroundColor: "#ad6ae7",
+  //         media: ticTacToe.imgUrl,
+  //         caption: `${ticTacToe.title} - ${ticTacToe.description}`
+  //       },
+  //       {
+  //         backgroundColor: "#ad6ae7",
+  //         media: ecoDB.imgUrl,
+  //         caption: `${ecoDB.title} - ${ecoDB.description}`
+  //       }
+  //     ]}
+  //   />
+  // );
 
-  const projects = gitHubRepos.slice(max - 3, max).map(repo => {
-    let {
-      id,
-      name,
-      description,
-      language,
-      clone_url,
-      homepage,
-      created_at,
-      updated_at
-    } = repo;
+  // this method will open a link in a new window - a tags aren't triggering within the Awesome Slider
+  const takeMeTo = link => window.open(link);
 
-    return (
-      <Project
-        key={id}
-        name={name}
-        description={description}
-        language={language}
-        url={clone_url}
-        homepage={homepage}
-        created={created_at.split("Z")[0]}
-        updated={updated_at}
-      />
+  const projects = projectDataArr.map((project, i) => {
+    const { title, description, imgUrl, liveLink, sourceCodeLink } = project;
+
+    const projectJsx = (
+      <div key={i} data-src={imgUrl}>
+        <h3 className="single-project__title">{title}</h3>
+        <p className="single-project__description">{description}</p>
+        <p
+          className="single-project__live-link"
+          onClick={() => takeMeTo(liveLink)}
+        >
+          Live Website ↗
+        </p>
+        <p
+          className="single-project__source-code-link"
+          onClick={() => takeMeTo(sourceCodeLink)}
+        >
+          GitHub ↗
+        </p>
+      </div>
     );
+
+    return projectJsx;
   });
 
-  return (
-    <div id="projects">
-      <h1>Projects</h1>
-      <div className="projects-sort-controller">
-        <button onClick={() => handleReposReSort("full_name")}>
-          <p>NAME</p>
-        </button>
-        <button onClick={() => handleReposReSort("created")}>
-          <p>CREATED</p>
-        </button>
+  const slider = (
+    <AwesomeSlider cssModule={AwesomeSliderStyles}>{projects}</AwesomeSlider>
+  );
 
-        <button onClick={() => handleReposReSort("updated")}>
-          <p>LAST UPDATED</p>
-        </button>
-        <button onClick={() => handleReposReSort("pushed")}>
-          <p>LASTEST PUSH</p>
-        </button>
-      </div>
-      <div className="projects-container">
-        {reposLoaded ? projects : "Loading Projects :D"}
-      </div>
-      <div className="project-page-turner">
-        {currentPage == 0
-          ? [
-              <button disabled key="arr-1-btn-1">
-                <p>FIRST PAGE</p>
-              </button>,
-              <button disabled key="arr-1-btn-2">
-                <p>PREV</p>
-              </button>
-            ]
-          : [
-              <button
-                onClick={() => handlePageChange("first")}
-                key="arr-2-btn-1"
-              >
-                <p>FIRST PAGE</p>
-              </button>,
-              <button
-                onClick={() => handlePageChange("prev")}
-                key="arr-2-btn-2"
-              >
-                <p>PREV</p>
-              </button>
-            ]}
-        <p>PAGE {currentPage + 1}/33</p>
-        {currentPage == 32
-          ? [
-              <button disabled key="arr-3-btn-1">
-                <p>NEXT</p>
-              </button>,
-              <button disabled key="arr-3-btn-2">
-                <p>LAST PAGE</p>
-              </button>
-            ]
-          : [
-              <button
-                onClick={() => handlePageChange("next")}
-                key="arr-4-btn-1"
-              >
-                <p>NEXT</p>
-              </button>,
-              <button
-                onClick={() => handlePageChange("last")}
-                key="arr-4-btn-2"
-              >
-                <p>LAST PAGE</p>
-              </button>
-            ]}
-      </div>
+  const projectsJsx = () => (
+    <div id="projects">
+      <div className="projects-container">{slider}</div>
     </div>
   );
+
+  return projectsJsx();
 };
 
 export default Projects;

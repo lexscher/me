@@ -12,23 +12,26 @@ const Project = props => {
     sourceCodeLink
   };
 
-  const project = (
-    <div data-src={imgUrl}>
-      <p>{title}</p>
-    </div>
-  );
-
   const projectJsx = () => (
-    <div data-src={imgUrl}>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <img src={imgUrl} alt={`a picture of the project, ${title}.`} />
-      <a href={liveLink}>Live Site</a>
-      <a href={sourceCodeLink}>GitHub</a>
+    <div key={i} data-src={imgUrl}>
+      <h3 className="single-project__title">{title}</h3>
+      <p className="single-project__description">{description}</p>
+      <p
+        className="single-project__live-link"
+        onClick={() => takeMeTo(liveLink)}
+      >
+        Live Website ↗
+      </p>
+      <p
+        className="single-project__source-code-link"
+        onClick={() => takeMeTo(sourceCodeLink)}
+      >
+        GitHub ↗
+      </p>
     </div>
   );
 
-  return project;
+  return projectJsx;
 };
 
 export default Project;

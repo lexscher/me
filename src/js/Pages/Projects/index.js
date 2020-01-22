@@ -1,9 +1,7 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React from "react";
 import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyles from "react-awesome-slider/src/styled/fall-animation";
-// import { Captioned, CaptionedStyles } from "react-awesome-slider/src/components/*";
-// import Frame from "react-awesome-slider/src/components/react-awesome-frame";
-import Project from "../../Components/FeaturedProject";
+// import Project from "../../Components/FeaturedProject";
 
 const Projects = () => {
   const [concipilo, chello, ecommunity, ticTacToe, ecoDB] = [
@@ -45,8 +43,6 @@ const Projects = () => {
     }
   ];
 
-  const [currentProject, swapCurrentPro] = useState(0);
-
   const projectDataArr = [
     { ...concipilo },
     { ...chello },
@@ -55,34 +51,13 @@ const Projects = () => {
     { ...ecoDB }
   ];
 
-  // const projectsComponent = (
-  //   <Captioned
-  //     cssModule={CaptionedStyles}
-  //     screens={[
-  //       {
-  //         backgroundColor: "#ad6ae7",
-  //         media: concipilo.imgUrl,
-  //         caption: `${concipilo.title} - ${concipilo.description}`
-  //       },
-  //       {
-  //         backgroundColor: "#ad6ae7",
-  //         media: ticTacToe.imgUrl,
-  //         caption: `${ticTacToe.title} - ${ticTacToe.description}`
-  //       },
-  //       {
-  //         backgroundColor: "#ad6ae7",
-  //         media: ecoDB.imgUrl,
-  //         caption: `${ecoDB.title} - ${ecoDB.description}`
-  //       }
-  //     ]}
-  //   />
-  // );
-
   // this method will open a link in a new window - a tags aren't triggering within the Awesome Slider
   const takeMeTo = link => window.open(link);
 
   const projects = projectDataArr.map((project, i) => {
     const { title, description, imgUrl, liveLink, sourceCodeLink } = project;
+    // THE FOLLOWING COMMENTED OUT CODE DID NOT WORK, FeaturedProject COMPONENT AND React Awesome Slider
+    // const projectJsx = (<Project key={i} projectData={project} />)
 
     const projectJsx = (
       <div key={i} data-src={imgUrl}>

@@ -1,90 +1,55 @@
-import React, { Fragment, useState, useEffect } from "react";
-import Project from "../../Components/FeedProject";
+import React, { useState, useCallback, useEffect } from "react";
+import useWebSocket, { ReadyState } from "react-use-websocket";
+
+import Project from "../../Components/Contribution";
 
 const LiveFeed = () => {
-  // Handle Repositories
-  const [gitHubRepos, setgitHubRepos] = useState([]);
+  // My Github Url
+  const sortedReposUrl =
+    "https://api.github.com/users/lexscher/repos?sort=updated&per_page=5";
+
+  const [gitHubRepos, setGithubRepos] = useState([]);
+
   const [reposLoaded, toggleReposLoaded] = useState(false);
-  // Handle current page
-  const [currentPage, setCurrentPage] = useState(0);
-  const [max, setMax] = useState(3);
-  // handle sort
-  const [sortedRepos, changeSortedRepos] = useState("pushed");
 
-  // Handle repo re-sort
-  const handleReposReSort = sortedParamString => {
-    switch (sortedParamString) {
-      case "full_name":
-        changeSortedRepos("full_name");
-        break;
-      case "created":
-        changeSortedRepos("created");
-        break;
-      case "updated":
-        changeSortedRepos("updated");
-        break;
-      case "pushed":
-        changeSortedRepos("pushed");
-        break;
+  const [socketUrl, setSocketUrl] = useState("wss://echo.websocket.org");
 
-      default:
-        changeSortedRepos("pushed");
-        break;
+  const [sendMessage, lastMessage, readyState, getWebSocket] = useWebSocket(
+    socketUrl
+  );
+
+  const handleClickChangeSocketUrl = useCallback(
+    () => setSocketUrl("wss://demos.kaazing.com/echo"),
+    []
+  );
+  const handleClickSendMessage = useCallback(() => sendMessage("Hello"), []);
+
+  useEffect(() => {
+    if (lastMessage !== null) {
+      //getWebSocket returns the WebSocket wrapped in a Proxy. This is to restrict actions like mutating a shared websocket, overwriting handlers, etc
+      const currentWebsocketUrl = getWebSocket().url;
+      console.log("received a message from ", currentWebsocketUrl);
+
+      setMessageHistory(prev => prev.concat(lastMessage));
     }
-    handlePageChange("first");
-  };
+  }, [lastMessage]);
 
-  // Change page
-  const handlePageChange = direction => {
-    switch (direction) {
-      case "next":
-        handleNextPage();
-        return;
-      case "prev":
-        handlePrevPage();
-        return;
-      case "first":
-        setCurrentPage(0);
-        setMax(3);
-        return;
-      case "last":
-        setCurrentPage(32);
-        setMax(99);
-        return;
-      default:
-        return;
-    }
-  };
-  // Next Page
-  const handleNextPage = () => {
-    // We only have ten pages
-    if (currentPage == 33) return;
-    setCurrentPage(currentPage + 1);
-    setMax(max + 3);
-    console.log("PAGE - " + currentPage + "MAX: " + max);
-  };
-  // Previous Page
-  const handlePrevPage = () => {
-    // No 'Page Zero' or lower.
-    if (currentPage == 0) return;
-    setCurrentPage(currentPage - 1);
-    setMax(max - 3);
-    console.log(currentPage);
-  };
+  const connectionStatus = {
+    [ReadyState.CONNECTING]: "Connecting",
+    [ReadyState.OPEN]: "Open",
+    [ReadyState.CLOSING]: "Closing",
+    [ReadyState.CLOSED]: "Closed"
+  }[readyState];
 
   const fetchRepos = () => {
-    toggleReposLoaded(false);
-    fetch(
-      `https://api.github.com/users/lexscher/repos?sort=${sortedRepos}&per_page=99&page=1`,
-      {
-        headers: {
-          Accept: "application/vnd.github.v3.raw+json"
-        }
+    fetch(sortedReposUrl, {
+      headers: {
+        Accept: "application/vnd.github.v3.raw+json"
       }
-    )
+    })
       .then(res => res.json())
       .then(data => {
-        setgitHubRepos([...data]);
+        setGithubRepos([...data]);
         toggleReposLoaded(true);
       })
       .catch(err => {
@@ -92,10 +57,10 @@ const LiveFeed = () => {
         return;
       });
   };
+  const updateRepos = () => console.log("Updated Repos!");
+  // const updateRepos = () => useEffect(() => fetchRepos(), [sortedRepos]);
 
-  useEffect(() => fetchRepos(), [sortedRepos]);
-
-  const projects = gitHubRepos.slice(max - 3, max).map(repo => {
+  const singleProject = gitHubRepos.slice(0, 2).map(repo => {
     let {
       id,
       name,
@@ -121,76 +86,18 @@ const LiveFeed = () => {
     );
   });
 
-  const generateLiveFeedSortConteoller = () => (
-    <div className="live-feed-sort-controller">
-      <button onClick={() => handleReposReSort("full_name")}>
-        <p>NAME</p>
-      </button>
-      <button onClick={() => handleReposReSort("created")}>
-        <p>CREATED</p>
-      </button>
-
-      <button onClick={() => handleReposReSort("updated")}>
-        <p>LAST UPDATED</p>
-      </button>
-      <button onClick={() => handleReposReSort("pushed")}>
-        <p>LASTEST PUSH</p>
-      </button>
-    </div>
-  );
-
-  const generatePageControlls = () => (
-    <div className="live-feed-page-turner">
-      {currentPage == 0
-        ? [
-            <button disabled key="arr-1-btn-1">
-              <p>FIRST PAGE</p>
-            </button>,
-            <button disabled key="arr-1-btn-2">
-              <p>PREV</p>
-            </button>
-          ]
-        : [
-            <button onClick={() => handlePageChange("first")} key="arr-2-btn-1">
-              <p>FIRST PAGE</p>
-            </button>,
-            <button onClick={() => handlePageChange("prev")} key="arr-2-btn-2">
-              <p>PREV</p>
-            </button>
-          ]}
-      <p>PAGE {currentPage + 1}/33</p>
-      {currentPage == 32
-        ? [
-            <button disabled key="arr-3-btn-1">
-              <p>NEXT</p>
-            </button>,
-            <button disabled key="arr-3-btn-2">
-              <p>LAST PAGE</p>
-            </button>
-          ]
-        : [
-            <button onClick={() => handlePageChange("next")} key="arr-4-btn-1">
-              <p>NEXT</p>
-            </button>,
-            <button onClick={() => handlePageChange("last")} key="arr-4-btn-2">
-              <p>LAST PAGE</p>
-            </button>
-          ]}
-    </div>
-  );
-
-  const liveFeedJsx = () => (
+  const liveFeedJsx = (
     <div id="live-feed">
-      <h1>GitHub Live Feed</h1>
-      {generateLiveFeedSortConteoller()}
-      <div className="live-feed-projects-container">
-        {reposLoaded ? projects : <h1>Loading Projects :D</h1>}
+      <div className="contribution-card__helper"></div>
+      <div className="contribution-card__helper"></div>
+      <div className="contribution-card__helper"></div>
+      <div className="contribution-card">
+        <code>Alex just ACTION to REPOSITORY LONG NAME</code>
       </div>
-      {generatePageControlls()}
     </div>
   );
 
-  return liveFeedJsx();
+  return liveFeedJsx;
 };
 
 export default LiveFeed;

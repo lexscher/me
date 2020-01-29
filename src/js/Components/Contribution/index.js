@@ -15,7 +15,7 @@ const FeedProject = props => {
   let dateUpdated = new Date(updated);
 
   return (
-    <div className="live-feed-project-card">
+    <div className="live-feed-contribution-card">
       <h2>
         <code>{name}</code>
       </h2>

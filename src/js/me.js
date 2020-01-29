@@ -51,11 +51,11 @@ const jsxNew = () => (
       <NavBar />
     </header>
       <Connect />
+      <LiveFeed />
     <div className="app">
       <About />
       <Skills />
       <Projects />
-      <LiveFeed />
       <Archives />
       <footer>
         <Footer />

@@ -50,12 +50,15 @@ const jsxNew = () => (
     <header>
       <NavBar />
     </header>
-      <Connect />
-      <LiveFeed />
+    <Connect />
+    <LiveFeed />
     <div className="app">
       <About />
+      {/* <div className="divider"></div> */}
       <Skills />
-      <Projects />
+      {/* <div className="divider"></div> */}
+      <Projects /> {/* May add gradient white -> grey -> black background */}
+      {/* <div className="divider"></div> */}
       <Archives />
       <footer>
         <Footer />

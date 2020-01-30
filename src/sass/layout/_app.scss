@@ -5,9 +5,14 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
 
-  > :not(:last-child) {
-    border-bottom: solid 0.1rem $color-primary-dark;
+  .divider {
+    padding: .5rem;
+    // height: 5rem;
+    border-radius: 5rem;
+    width: 80%;
+    background-color: $color-primary-dark;
   }
+
 }

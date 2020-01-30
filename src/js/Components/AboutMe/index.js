@@ -35,7 +35,7 @@ const AboutMe = () => {
       <p>
         During my free time, I love spending time with friends and the fam,
         cooking interesting dishes, boxing, reading science fiction, watching
-        youtube videos, bouldering, reading manga, dancing, and indulging in
+        youtube videos, bouldering, reading manga, dancing, and indulging in{" "}
         <a href="https://www.amthaibistro.com/" target="_blank">
           Thai
         </a>{" "}

@@ -6,7 +6,7 @@
   justify-content: space-around;
   align-items: center;
   color: $color-white;
-  background-color: $color-white;
+  background-color: $color-black;
 
   .projects-container {
     height: 120rem;
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    // overflow-y: scroll;
+    overflow-y: hidden;
 
     div.awssld__content {
       div {

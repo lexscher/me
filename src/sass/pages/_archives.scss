@@ -5,24 +5,109 @@
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  background-color: $color-black;
+  color: $color-white;
+  font-size: $font-size-large;
+  
+  @include md {
+    font-size: $font-size-medium;
+  }
+  
+  @include lg {
+    font-size: $font-size-default;
+  }
+
+  > h1 {
+    color: $color-black;
+  }
 
   > div {
-    height: 40rem;
+    height: 65rem;
+    width: 100%;
   }
 
   .archive-list-container {
     display: flex;
-    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     ul {
-      list-style-type: square;
+      flex-grow: 1;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .versions-list-item {
+        font-size: $font-size-large;
+        cursor: pointer;
+
+        &::before {
+          color: $color-secondary;
+          content: "❧ ";
+        }
+
+        &[class$="__current"] {
+          cursor: text;
+        }
+
+        &:not(:last-child) {
+          transition: 0.4s ease;
+
+          &:hover {
+            color: $color-grey-dark;
+            text-shadow: 3px 3px 0 $color-primary-dark, -1px -1px 0 $color-primary-dark, 1px -1px 0 $color-primary-dark,
+              -1px 1px 0 $color-primary-dark, 1px 1px 0 $color-primary-dark;
+          }
+        }
+      }
     }
   }
 
   .archive-view-container {
-    width: 100%;
-    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .archive-view--container__details {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        cursor: pointer;
+      }
+
+      .archive-view--img {
+        width: 100%;
+        @include md {
+          width: 80%;
+        }
+        @include lg {
+          width: 70%;
+        }
+        // border: solid .05rem $color-primary-dark;
+      }
+    }
+
+    .archive-view--container__btn--back {
+      button.btn--back {
+        border: 0;
+        background-color: $color-primary-dark;
+        color: $color-black;
+        cursor: pointer;
+        border-radius: 0.1rem;
+        padding: 0.7rem 0.5rem;
+        margin-left: 1rem;
+
+        code {
+          padding: 0.5rem;
+        }
+      }
+    }
   }
 }

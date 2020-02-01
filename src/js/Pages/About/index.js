@@ -8,7 +8,8 @@ const About = () => {
   const aboutJsx = () => (
     <div id="about">
       <h1>
-        About me.
+        {/* About me. */}
+        <br />
         {/* <a className="about-toggle" onClick={() => toggleAboutYouMode(!aboutYouMode)}>
           {!aboutYouMode ? " me" : " you"}
         </a> */}

@@ -1,7 +1,7 @@
 header {
   background-color: rgba($color: $color-white, $alpha: 0.9);
   top: 0;
-  height: 7vh;
+  height: 4.5rem;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -30,7 +30,7 @@ header {
         width: 3.5rem;
         height: 0.5rem;
         background-color: $color-black;
-        margin: 0.6rem 0.4rem;
+        margin: 0.5rem;
         transition: 0.4s;
 
         &:nth-last-child(3).menu-clicked {

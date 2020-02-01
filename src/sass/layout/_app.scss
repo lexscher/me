@@ -8,11 +8,19 @@
   margin-bottom: 0.2rem;
 
   .divider {
-    padding: .5rem;
-    // height: 5rem;
-    border-radius: 5rem;
-    width: 80%;
-    background-color: $color-primary-dark;
-  }
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &[class$="__blk"] {
+      background-color: $color-black;
+    }
 
+    > div {
+      padding: 0.5rem;
+      border-radius: .2rem;
+      width: 80%;
+      background-color: $color-primary-light;
+    }
+  }
 }

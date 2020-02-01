@@ -15,7 +15,7 @@ const Projects = () => {
     {
       title: "Chello",
       description: "A Trello Clone",
-      imgUrl: "https://i.imgur.com/ahH0L9d.png",
+      imgUrl: "https://i.imgur.com/xE1JTPb.png",
       liveLink: "https://chello-front-end.herokuapp.com/",
       sourceCodeLink: "https://github.com/Lexscher/tGRAH-api"
     },

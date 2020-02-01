@@ -58,8 +58,10 @@ const jsxNew = () => (
       <Skills />
       {/* <div className="divider"></div> */}
       <Projects /> {/* May add gradient white -> grey -> black background */}
-      {/* <div className="divider"></div> */}
       <Archives />
+      <div className="divider divider-container__blk">
+        <div></div>
+      </div>
       <footer>
         <Footer />
       </footer>

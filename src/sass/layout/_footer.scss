@@ -10,6 +10,13 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      a {
+        cursor: pointer;
+        font-size: $font-size-large;
+        color: $color-primary-light;
+        padding: 0 .5rem;
+      }
   }
 
 }

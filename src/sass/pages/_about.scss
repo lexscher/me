@@ -67,38 +67,4 @@
   .about-you {
     // height: 85vh;
   }
-
-  .about-cards-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    overflow-y: scroll;
-
-    @include md {
-      flex-direction: row;
-      height: 92%;
-      overflow-x: scroll;
-    }
-
-    @include lg {
-      justify-content: center;
-    }
-
-    [class*="card"] {
-      min-height: 40rem;
-      min-width: 35rem;
-      width: 30rem;
-      margin: 1rem 2rem;
-      padding: 0.5rem 1rem;
-      position: relative;
-      background-color: $color-white;
-
-      ul {
-        list-style: none;
-      }
-    }
-  }
 }

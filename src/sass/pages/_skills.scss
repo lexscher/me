@@ -1,4 +1,8 @@
 #skills {
+  > h1 {
+    color: $color-white;
+  }
+
   .skills-content {
     width: 100vw;
     // height: 85vh;
@@ -6,7 +10,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+    border-bottom: solid 0.2rem $color-black;
 
     @include md {
       flex-direction: row-reverse;

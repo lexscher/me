@@ -6,7 +6,7 @@ import AwesomeSliderStyles from "react-awesome-slider/src/styled/fall-animation"
 const Projects = () => {
   const [concipilo, chello, ecommunity, ticTacToe, ecoDB] = [
     {
-      title: "concipilo",
+      title: "Concipilo",
       description: "A Text Adventure Game",
       imgUrl: "https://i.imgur.com/VgK74v3.png",
       liveLink: "https://lexscher.github.io/Concipilo/",
@@ -15,7 +15,7 @@ const Projects = () => {
     {
       title: "Chello",
       description: "A Trello Clone",
-      imgUrl: "https://i.imgur.com/ahH0L9d.png",
+      imgUrl: "https://i.imgur.com/xE1JTPb.png",
       liveLink: "https://chello-front-end.herokuapp.com/",
       sourceCodeLink: "https://github.com/Lexscher/tGRAH-api"
     },
@@ -67,7 +67,7 @@ const Projects = () => {
           className="single-project__live-link"
           onClick={() => takeMeTo(liveLink)}
         >
-          Live Website ↗
+          Live App ↗
         </p>
         <p
           className="single-project__source-code-link"

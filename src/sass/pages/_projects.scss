@@ -7,6 +7,10 @@
   align-items: center;
   color: $color-white;
   background-color: $color-black;
+  font-size: $font-size-default;
+  @include lg {
+    font-size: $font-size-ms;
+  }
 
   .projects-container {
     height: 120rem;
@@ -17,7 +21,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow-y: hidden;
+
+    @include lg {
+      div.awssld {
+        width: 80vw;
+      }
+    }
+
+    @include xl {
+      width: 80vw;
+    }
 
     div.awssld__content {
       div {
@@ -29,6 +42,22 @@
         align-items: flex-end;
         margin-bottom: 3rem;
       }
+    }
+
+    .awssld {
+      --slider-height-percentage: 60%;
+      --slider-transition-duration: 700ms;
+      --organic-arrow-thickness: 4px;
+      --organic-arrow-border-radius: 0px;
+      --organic-arrow-height: 40px;
+      --organic-arrow-color: #ad6ae7;
+      --control-button-width: 10%;
+      --control-button-height: 25%;
+      --control-button-background: transparent;
+      --control-bullet-color: #fff;
+      --control-bullet-active-color: #fff;
+      --loader-bar-color: #ad6ae7;
+      --loader-bar-height: 6px;
     }
 
     [class^="single-project"] {
@@ -43,6 +72,8 @@
       &[class$="__title"] {
         // top: 1rem;
         // margin-right: 10rem;
+        color: $color-primary-light;
+        font-weight: 500;
       }
 
       &[class$="__description"] {
@@ -52,34 +83,12 @@
 
       &[class$="__live-link"],
       &[class$="__source-code-link"] {
-        // top: 1rem;
-        // margin-right: 10rem;
         cursor: pointer;
         &:hover {
-          color: $color-primary;
+          background-color: rgba($color: $color-black, $alpha: 0.5);
+          color: $color-primary-light;
         }
       }
-
-      // &[class$="__source-code-link"] {
-      //   // top: 1rem;
-      //   // margin-right: 10rem;
-      //   cursor: pointer;
-      // }
-    }
-
-    @include lg {
-      // height: 90rem;
-      div.awssld {
-        width: 80vw;
-      }
-      // margin: 2.5rem;
-      // width: 95vw;
-      flex-direction: row;
-      overflow-x: scroll;
-    }
-
-    @include xl {
-      justify-content: center;
     }
   }
 }

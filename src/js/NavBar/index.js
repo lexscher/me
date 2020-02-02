@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MobileNav, { Dropdown } from "./Mobile";
+import WebNav from './Web';
 
 const NavBar = () => {
   const [menuBarSelected, toggleMenuBarSelected] = useState(false);
@@ -19,19 +20,11 @@ const NavBar = () => {
   );
 
   // WEB NAV
-  const generateWebNav = () => (
-    <div className="menu-web-container">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#live-feed">GitHub Live Feed</a>
-      <a href="#archives">Archives</a>
-    </div>
-  );
+  const webNavJsx = <WebNav />
 
   const navJsx = (
     <div className="nav">
-      {generateWebNav()}
+      {webNavJsx}
       {mobileNavJsx}
       {menuBarSelected && dropdownJsx}
     </div>

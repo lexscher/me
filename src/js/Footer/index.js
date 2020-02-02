@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
-    const footerJsx = () => (
-        <div id="footer">
-            <h1>I am the footer</h1>
-        </div>
-    )
+  const footerJsx = () => (
+    <div id="footer">
+      <a src="https://github.com/Lexscher/me/tree/master">
+        <p>Click Me to View the Source Code for This Website</p>
+      </a>
+    </div>
+  );
 
-    return footerJsx()
-}
+  return footerJsx();
+};
 
-export default Footer
+export default Footer;

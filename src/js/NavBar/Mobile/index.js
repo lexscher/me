@@ -21,7 +21,6 @@ export const Dropdown = ({ menuBarSelected, toggleMenuBarSelected }) => (
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#live-feed">GitHub Live Feed</a>
       <a href="#archives">Archives</a>
     </div>
   </div>

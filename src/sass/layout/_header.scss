@@ -52,6 +52,9 @@ header {
 
     .menu-web-container {
       display: none;
+      a {
+        text-decoration: none;
+      }
     }
 
     @include md {

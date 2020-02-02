@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const Skills = () => {
-  let skillsJsx = () => (
+  const skillsJsx = () => (
     <div id="skills">
-      <h1>Shhhh, don't tell them you saw me...</h1>
+      <h1>Shhhh, do not tell them you saw me...</h1>
       <div className="skills-content">
         <div className="technical-skills-card">
           <div>

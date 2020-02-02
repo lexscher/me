@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const FeedProject = props => {
+const FeedProject = (props) => {
   const {
     name,
     description,
@@ -9,10 +9,10 @@ const FeedProject = props => {
     url,
     homepage,
     created,
-    updated
+    updated,
   } = props;
-  let dateCreated = new Date(created);
-  let dateUpdated = new Date(updated);
+  const dateCreated = new Date(created);
+  const dateUpdated = new Date(updated);
 
   return (
     <div className="live-feed-contribution-card">
@@ -20,11 +20,18 @@ const FeedProject = props => {
         <code>{name}</code>
       </h2>
       {description ? <code>{description}</code> : ''}
-      {language ? <code>Language: {language}</code> : ''}
+      {language ? (
+        <code>
+          Language:
+          {language}
+        </code>
+      ) : ''}
       <code>{`Last updated ${moment(dateUpdated).fromNow()}.`}</code>
-      <code>{`Created: ${moment(dateCreated).format(
-        'MMMM Do YYYY, h:mm:ss a'
-      )}`}</code>
+      <code>
+        {`Created: ${moment(dateCreated).format(
+          'MMMM Do YYYY, h:mm:ss a',
+        )}`}
+      </code>
       {homepage ? (
         <p>
           <a href={homepage} target="_blank">

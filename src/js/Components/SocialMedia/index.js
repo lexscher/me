@@ -1,8 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const SocialMedia = props => {
+const SocialMedia = (props) => {
   // grab the items we need from props
-  const { id, title, link, svgPath } = props.socialMediaData;
+  const {
+    id, title, link, svgPath,
+  } = props.socialMediaData;
 
   // Generate svg icon
   const svgIcon = () => (

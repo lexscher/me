@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const AboutMe = () => {
   const aboutMeJsx = () => (
@@ -16,11 +16,14 @@ const AboutMe = () => {
           WeWork, I'm completing my B.S. in Computer Science part-time.
         </p>
         <p>
-          I'm also a cellist! I attended a{" "}
+          I'm also a cellist! I attended a
+          {' '}
           <a href="https://tuhs.nyc/" target="_blank">
             performing arts high school
-          </a>{" "}
-          as an intrumental music major. I also studied at{" "}
+          </a>
+          {' '}
+          as an intrumental music major. I also studied at
+          {' '}
           <a href="https://www.juilliard.edu/" target="_blank">
             Juilliard
           </a>
@@ -31,14 +34,18 @@ const AboutMe = () => {
         <p>
           During my free time, I love spending time with friends and the fam,
           cooking interesting dishes, boxing, reading science fiction, watching
-          youtube videos, bouldering, reading manga, dancing, and indulging in{" "}
+          youtube videos, bouldering, reading manga, dancing, and indulging in
+          {' '}
           <a href="https://www.amthaibistro.com/" target="_blank">
             Thai
-          </a>{" "}
-          or{" "}
+          </a>
+          {' '}
+          or
+          {' '}
           <a href="http://lavillapizza.com/" target="_blank">
             Italian
-          </a>{" "}
+          </a>
+          {' '}
           cuisine.
         </p>
       </div>

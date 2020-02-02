@@ -119,3 +119,40 @@
     border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
   }
 }
+
+@keyframes opacityPulse{
+  0% {opacity: 1.0;}
+  50% {opacity: 0.0;}
+  100% {opacity: 1.0;}
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes scalePulse {
+  0% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(0.95);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}

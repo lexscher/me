@@ -1,38 +1,21 @@
 import React, { useState } from "react";
+import MobileNav, { Dropdown } from "./Mobile";
 
 const NavBar = () => {
   const [menuBarSelected, toggleMenuBarSelected] = useState(false);
   // MOBILE NAV
-  const generateMobileNav = () => (
-    <div
-      className="menu-bars-container"
-      onClick={() => toggleMenuBarSelected(!menuBarSelected)}
-    >
-      <div
-        className={`menu-bar${menuBarSelected ? " menu-clicked" : ""}`}
-      ></div>
-      <div
-        className={`menu-bar${menuBarSelected ? " menu-clicked" : ""}`}
-      ></div>
-      <div
-        className={`menu-bar${menuBarSelected ? " menu-clicked" : ""}`}
-      ></div>
-    </div>
+  const mobileNavJsx = (
+    <MobileNav
+      menuBarSelected={menuBarSelected}
+      toggleMenuBarSelected={toggleMenuBarSelected}
+    />
   );
 
-  const generateDropdown = () => (
-    <div className="menu">
-      <div
-        className="dropdown"
-        onClick={() => toggleMenuBarSelected(!menuBarSelected)}
-      >
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#live-feed">GitHub Live Feed</a>
-      <a href="#archives">Archives</a>
-      </div>
-    </div>
+  const dropdownJsx = (
+    <Dropdown
+      menuBarSelected={menuBarSelected}
+      toggleMenuBarSelected={toggleMenuBarSelected}
+    />
   );
 
   // WEB NAV
@@ -46,15 +29,15 @@ const NavBar = () => {
     </div>
   );
 
-  const navJsx = () => (
+  const navJsx = (
     <div className="nav">
       {generateWebNav()}
-      {generateMobileNav()}
-      {menuBarSelected ? generateDropdown() : ""}
+      {mobileNavJsx}
+      {menuBarSelected && dropdownJsx}
     </div>
   );
 
-  return navJsx();
+  return navJsx;
 };
 
 export default NavBar;

@@ -63,7 +63,7 @@ const Connect = () => {
       className={!connectMode ? "btn-connect btn-hiding-content" : "btn-connect"}
       onClick={() => toggleConnectMode(!connectMode)}
     >
-      {!connectMode ? "✚" : "✘"}
+      <h2>{!connectMode ? "✚": "✘"}</h2>
     </button>
   );
 

@@ -8,13 +8,14 @@
   background-color: $color-black;
   color: $color-white;
   font-size: $font-size-large;
-  
+
   @include md {
     font-size: $font-size-medium;
   }
-  
+
   @include lg {
     font-size: $font-size-default;
+    .wayback-p {font-size:$font-size-medium}
   }
 
   > h1 {
@@ -24,6 +25,11 @@
   > div {
     height: 65rem;
     width: 100%;
+  }
+
+  .archive-list-container,.archive-view-container
+  {
+    animation: fadeIn 2s;
   }
 
   .archive-list-container {
@@ -44,22 +50,27 @@
         font-size: $font-size-large;
         cursor: pointer;
 
-        &::before {
-          color: $color-secondary;
-          content: "❧ ";
-        }
-
         &[class$="__current"] {
           cursor: text;
         }
 
         &:not(:last-child) {
+          padding-right: .5rem;
           transition: 0.4s ease;
+          &::before {
+            transition: .4s ease-in;
+            color: $color-black;
+            content: "❧ ";
+          }
 
           &:hover {
-            color: $color-grey-dark;
-            text-shadow: 3px 3px 0 $color-primary-dark, -1px -1px 0 $color-primary-dark, 1px -1px 0 $color-primary-dark,
-              -1px 1px 0 $color-primary-dark, 1px 1px 0 $color-primary-dark;
+            color: $color-black;
+            text-shadow: $shadow-white, $shadow-white;
+            &::before {
+              text-shadow: $shadow-white;
+              // color: $color-red;
+              content: "❧ ";
+            }
           }
         }
       }
@@ -70,6 +81,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 
     .archive-view--container__details {
       flex-grow: 1;
@@ -90,14 +102,13 @@
         @include lg {
           width: 70%;
         }
-        // border: solid .05rem $color-primary-dark;
       }
     }
 
     .archive-view--container__btn--back {
       button.btn--back {
         border: 0;
-        background-color: $color-primary-dark;
+        background-color: $color-primary-light;
         color: $color-black;
         cursor: pointer;
         border-radius: 0.1rem;

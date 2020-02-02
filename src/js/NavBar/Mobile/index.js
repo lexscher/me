@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-
+import React from 'react';
 
 const MobileNav = ({ menuBarSelected, toggleMenuBarSelected }) => (
   <div
     className="menu-bars-container"
     onClick={() => toggleMenuBarSelected(!menuBarSelected)}
   >
-    <div className={`menu-bar${menuBarSelected ? " menu-clicked" : ""}`}></div>
-    <div className={`menu-bar${menuBarSelected ? " menu-clicked" : ""}`}></div>
-    <div className={`menu-bar${menuBarSelected ? " menu-clicked" : ""}`}></div>
+    <div className={`menu-bar${menuBarSelected ? ' menu-clicked' : ''}`} />
+    <div className={`menu-bar${menuBarSelected ? ' menu-clicked' : ''}`} />
+    <div className={`menu-bar${menuBarSelected ? ' menu-clicked' : ''}`} />
   </div>
 );
 

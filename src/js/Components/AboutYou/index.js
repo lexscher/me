@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const AboutYou = () => {
   const [userDataLoaded, toggleUserDataLoaded] = useState(false);
   const [userData, setUserData] = useState(null);
 
   const getBatteryInfo = () => {
-    window.navigator.getBattery().then(batteryData => {
+    window.navigator.getBattery().then((batteryData) => {
       console.log(batteryData);
     });
   };
@@ -13,7 +13,11 @@ const AboutYou = () => {
   const aboutYouJsx = () => (
     <div className="about-you">
       <h1>
-        Here's what <i>I think</i> I know.
+        Here's what
+        {' '}
+        <i>I think</i>
+        {' '}
+        I know.
       </h1>
       <p>Your information</p>
       <p>

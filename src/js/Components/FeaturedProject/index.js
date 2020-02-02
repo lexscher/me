@@ -1,15 +1,15 @@
-import React from "react";
-import { Captioned, CaptionedStyles } from "react-awesome-slider";
+import React from 'react';
+import { Captioned, CaptionedStyles } from 'react-awesome-slider';
 // import Captioned from "react-awesome-slider/src/components/react-awesome-frame";
 // import CaptionedStyles from "react-awesome-slider/src/components/react-awesome-frame/styles.scss";
 
-const Project = props => {
+const Project = (props) => {
   props.projectdata = {
     title,
     description,
     imgUrl,
     liveLink,
-    sourceCodeLink
+    sourceCodeLink,
   };
 
   const projectJsx = () => (

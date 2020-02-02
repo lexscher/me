@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import AboutMe from "../../Components/AboutMe";
-import AboutYou from "../../Components/AboutYou";
+import React, { useState } from 'react';
+import AboutMe from '../../Components/AboutMe';
+import AboutYou from '../../Components/AboutYou';
 
 const About = () => {
   const [aboutYouMode, toggleAboutYouMode] = useState(false);

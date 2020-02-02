@@ -29,11 +29,6 @@ const AboutMe = () => {
           That's when I fell in love with the tech field.
         </p>
         <p>
-          That being said, I'm not afraid to use my creative side when building
-          out projects or finding solutions for a problem. I'm magnanimously
-          conscious while writing code, or crafting handsome applications.
-        </p>
-        <p>
           During my free time, I love spending time with friends and the fam,
           cooking interesting dishes, boxing, reading science fiction, watching
           youtube videos, bouldering, reading manga, dancing, and indulging in{" "}

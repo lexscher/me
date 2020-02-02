@@ -87,6 +87,7 @@ const Projects = () => {
 
   const projectsJsx = () => (
     <div id="projects">
+    <h1><br /></h1>
       <div className="projects-container">{slider}</div>
     </div>
   );

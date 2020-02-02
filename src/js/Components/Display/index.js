@@ -16,7 +16,7 @@ const Display = ({ toggleArchiveDisplayMode, selectedArchiveData }) => {
   );
 
   const waybackJsx = (
-    <p>
+    <p className="wayback-p">
       Explore the site via{" "}
       <a onClick={() => takeMeTo(waybackLink)} target="_blank">
         wayback machine
@@ -28,9 +28,9 @@ const Display = ({ toggleArchiveDisplayMode, selectedArchiveData }) => {
     <div className="archive-view-container">
       {backButtonJsx}
       <div className="archive-view--container__details">
-        <h1>
+        <h3>
           <code>Version {version.toFixed(1)}</code>
-        </h1>
+        </h3>
         <img
           className="archive-view--img"
           src={"https://drive.google.com/uc?export=view&id=" + driveLinkID}

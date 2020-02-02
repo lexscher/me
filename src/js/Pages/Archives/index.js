@@ -90,8 +90,12 @@ const Archives = () => {
 
   const archivesJsx = (
     <div id="archives">
-      <h1>Archives</h1>
+      <h1>Aloha!</h1>
+      <h3>
+        <br />
+      </h3>
       {archiveDisplayJsx}
+      <br />
     </div>
   );
 

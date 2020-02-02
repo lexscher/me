@@ -19,9 +19,8 @@ html {
         color: $color-primary-dark;
         
         &:hover {
-          color: $color-black;
-          text-shadow: 3px 3px 0 $color-primary-dark, -1px -1px 0 $color-primary-dark, 1px -1px 0 $color-primary-dark,
-            -1px 1px 0 $color-primary-dark, 1px 1px 0 $color-primary-dark;
+          // color: $color-primary-light;
+          text-shadow: $shadow-black-white;
         }
       }
     }

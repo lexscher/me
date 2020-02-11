@@ -5,7 +5,7 @@ import Connect from '../Connect';
 const particleStyles = {
   particles: {
     number: {
-      value: 105,
+      value: 150,
       density: {
         enable: true,
         value_area: 800,

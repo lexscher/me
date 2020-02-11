@@ -1,0 +1,71 @@
+.safety-app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-black;
+  color: $color-primary-light;
+
+  .safety-h1 {
+    font-weight: 100;
+    font-size: $font-size-medium;
+
+    @include sm {
+      font-size: $font-size-large;
+    }
+
+    @include md {
+      font-size: $font-size-xlarge;
+    }
+  }
+
+  .connect-tab {
+    .social-media {
+      .social-media-item {
+        box-shadow: 7.5px 7.5px 25px rgba(255, 0, 0, 0.2);
+        svg {
+          fill: $color-primary-light !important;
+        }
+        background-color: transparent;
+
+        @for $i from 1 to 6 {
+          &:nth-child(#{$i}) {
+            animation: morphingTwo #{($i * 0.1) + 15s} infinite;
+            animation-delay: #{($i * 0.5) + 0.3s};
+          }
+        }
+      }
+    }
+
+    .btn-connect {
+      color: $color-primary-light;
+      background-color: transparent;
+    }
+
+    .btn-hiding-content {
+      animation: opacityPulse 4s infinite;
+      &:hover {
+        animation: wiggle 1.5s infinite;
+      }
+    }
+  }
+
+  .particles-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    .particle-block {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: transparent;
+    }
+  }
+}

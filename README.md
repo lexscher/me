@@ -1,6 +1,6 @@
 # Welcome!
 
-This is the readme for my portfolio, built with React!
+This is the readme for my portfolio, built with React via Webpack and Babel!
 
 There are plenty of cool things here~
 

@@ -12,7 +12,7 @@ import Footer from './Footer';
 import SafeApp from './Pages/SafeApp';
 
 const App = () => {
-  const REMODELING = true;
+  // const REMODELING = true;
 
   const coreJsx = (
     <>
@@ -35,7 +35,7 @@ const App = () => {
     </>
   );
 
-  return REMODELING ? <SafeApp /> : coreJsx;
+  return <SafeApp />;
 };
 
 export default App;

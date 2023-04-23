@@ -1,13 +1,14 @@
+const path = require('path');
 const webpack = require('webpack');
 const common = require('./webpack.common');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
+    static: path.join(__dirname, 'dist'),
     hot: true
   },
   module: {
@@ -31,10 +32,9 @@ module.exports = merge(common, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Alexander',
-      inject: false,
-      template: require('html-webpack-template'),
-      bodyHtmlSnippet: '<main class="main" id="root"></main>'
+      template: path.resolve(__dirname, 'src', 'index.html'),
+      filename: 'index.html',
+      inject: 'body'
     })
   ] // <~ Plugins
 });

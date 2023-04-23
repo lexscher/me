@@ -30,13 +30,13 @@ const Connect = () => {
     },
     {
       id: 'github-svg',
-      link: 'https://github.com/Lexscher',
+      link: 'https://github.com/lexscher',
       title: 'GitHub',
       svgPath: githubSvgPath,
     },
     {
       id: 'twitter-svg',
-      link: 'https://twitter.com/Lexscher',
+      link: 'https://twitter.com/lexscher',
       title: 'Twitter',
       svgPath: twitterSvgPath,
     },

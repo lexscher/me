@@ -1,6 +1,7 @@
-import React from 'react';
-import Particles from 'react-particles-js';
+import React, { useCallback } from 'react';
 import Connect from '../Connect';
+import Particles from 'react-particles';
+import { loadFull } from 'tsparticles'
 
 const particleStyles = {
   particles: {
@@ -105,12 +106,28 @@ const particleStyles = {
   },
   retina_detect: true,
 };
+
 const SafeApp = () => {
+  const particlesInit = useCallback(async engine => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async container => {
+      await console.log(container);
+  }, []);
+
   const appJsx = (
     <div className="safety-app">
       <h1 className="safety-h1">Alexander Schelchere</h1>
       <div className="particles-container">
-        <Particles className="particle-block" params={particleStyles} />
+        <Particles 
+          id="tsparticles" 
+          className="particle-block" 
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={particleStyles} 
+        />
       </div>
       <Connect />
     </div>
